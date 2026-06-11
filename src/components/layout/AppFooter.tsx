@@ -11,6 +11,15 @@ export async function AppFooter() {
   const translateCommon = await getTranslations('common');
   const translateA11y = await getTranslations('a11y');
 
+  const shareUrl = encodeURIComponent(site.url);
+  const shareLinks = [
+    { label: 'X', href: `https://twitter.com/intent/tweet?url=${shareUrl}` },
+    { label: 'Facebook', href: `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}` },
+    { label: 'Pinterest', href: `https://pinterest.com/pin/create/button/?url=${shareUrl}` },
+    { label: 'LinkedIn', href: `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}` },
+    { label: 'WhatsApp', href: `https://wa.me/?text=${shareUrl}` },
+  ];
+
   return (
     <footer className="border-t border-accent/[0.14] bg-bg-sunken px-5 pb-8 pt-[72px] sm:px-6 lg:px-12">
       <div className="mx-auto grid max-w-content grid-cols-1 items-start gap-12 text-center md:grid-cols-3 md:text-left">
@@ -59,17 +68,36 @@ export async function AppFooter() {
             </a>
             <a
               className="font-sans text-xs tracking-[0.16em] text-text-muted transition-colors hover:text-[#f3e4b8]"
-              href={site.social.tiktok}
+              href={site.social.facebook}
               rel="noopener noreferrer"
               target="_blank"
             >
-              {translateFooter('tiktok')}
+              {translateFooter('facebook')}
             </a>
           </div>
         </div>
       </div>
 
-      <div className="mx-auto mt-[54px] max-w-content border-t border-white/5 pt-[22px] text-center">
+      <div className="mx-auto mt-[54px] flex max-w-content flex-col items-center gap-[14px] border-t border-white/5 pt-[28px] sm:flex-row sm:justify-center">
+        <span className="font-mono text-[11px] uppercase tracking-spec text-gold-label">
+          {translateFooter('share')}
+        </span>
+        <div className="flex flex-wrap justify-center gap-[18px]">
+          {shareLinks.map((item) => (
+            <a
+              key={item.label}
+              className="font-sans text-xs tracking-[0.16em] text-text-muted transition-colors hover:text-[#f3e4b8]"
+              href={item.href}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <div className="mx-auto mt-[28px] max-w-content border-t border-white/5 pt-[22px] text-center">
         <p className="font-sans text-[11px] leading-[1.7] tracking-[0.08em] text-text-muted">
           {translateFooter('legal')}
         </p>

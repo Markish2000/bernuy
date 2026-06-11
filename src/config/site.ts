@@ -3,8 +3,8 @@ export const site = {
   url: 'https://bernuy.com.ar',
   email: 'bernuy@bernuy.com.ar',
   social: {
-    instagram: 'https://instagram.com/bernuy',
-    tiktok: 'https://tiktok.com/@bernuy',
+    instagram: 'https://www.instagram.com/bernuy.perfumes/',
+    facebook: 'https://www.facebook.com/bernuy.oficial/',
   },
 } as const;
 
