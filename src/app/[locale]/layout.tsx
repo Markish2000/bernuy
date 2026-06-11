@@ -65,7 +65,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     name: site.name,
     url: site.url,
     logo: `${site.url}/assets/brand/logo-letter-b.png`,
-    sameAs: [site.social.instagram, site.social.tiktok],
+    sameAs: [site.social.instagram, site.social.facebook],
   };
 
   return (
