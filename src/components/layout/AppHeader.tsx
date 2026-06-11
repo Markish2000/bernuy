@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { mainNav } from '@/config/navigation';
+import { products } from '@/data/products';
 import { Logo } from '@/components/layout/Logo';
 import { MobileMenu } from '@/components/layout/MobileMenu';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
@@ -18,6 +19,7 @@ interface AppHeaderProps {
 export function AppHeader({ variant = 'transparent' }: AppHeaderProps) {
   const translateNav = useTranslations('nav');
   const translateA11y = useTranslations('a11y');
+  const translateProducts = useTranslations('products');
   const [solid, setSolid] = useState(variant === 'solid');
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -46,15 +48,44 @@ export function AppHeader({ variant = 'transparent' }: AppHeaderProps) {
           <Logo href="/" label={translateA11y('logoLabel')} size={24} />
 
           <nav aria-label="Principal" className="hidden items-center gap-11 md:flex">
-            {mainNav.map((item) => (
-              <Link
-                key={item.labelKey}
-                className="font-sans text-[12.5px] uppercase tracking-nav text-text-body transition-colors duration-[350ms] hover:text-[#f3e4b8]"
-                href={`/#${item.hash}`}
-              >
-                {item.labelKey === 'nav.about' ? translateNav('about') : translateNav('fragrances')}
-              </Link>
-            ))}
+            {mainNav.map((item) => {
+              const linkClass =
+                'font-sans text-[12.5px] uppercase tracking-nav text-text-body transition-colors duration-[350ms] hover:text-[#f3e4b8]';
+
+              if (item.labelKey === 'nav.fragrances') {
+                return (
+                  <div className="group relative" key={item.labelKey}>
+                    <Link className={linkClass} href={`/#${item.hash}`}>
+                      {translateNav('fragrances')}
+                    </Link>
+
+                    <div className="pointer-events-none absolute left-1/2 top-full z-50 -translate-x-1/2 pt-5 opacity-0 transition-opacity duration-300 group-hover:pointer-events-auto group-hover:opacity-100">
+                      <ul className="min-w-[220px] rounded-md border border-accent/[0.16] bg-bg-sunken/[0.96] py-2 shadow-[0_18px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-[14px]">
+                        {products.map((product) => (
+                          <li key={product.slug}>
+                            <Link
+                              className="flex items-center gap-3 px-5 py-2.5 font-sans text-[12.5px] uppercase tracking-nav text-text-body transition-colors duration-200 hover:text-[#f3e4b8]"
+                              href={`/fragancias/${product.slug}`}
+                            >
+                              <span className="font-serif text-[15px] text-[#c9a86a]">
+                                {product.letter}
+                              </span>
+                              {translateProducts(`${product.slug}.name`)}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <Link className={linkClass} href={`/#${item.hash}`} key={item.labelKey}>
+                  {translateNav('about')}
+                </Link>
+              );
+            })}
             <ThemeToggle label={translateA11y('themeToggle')} />
             <LanguageSwitcher label={translateA11y('languageSwitcher')} />
           </nav>

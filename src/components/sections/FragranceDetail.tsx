@@ -7,6 +7,8 @@ import { ScrollCueBar } from '@/components/sections/ScrollCueBar';
 import { ExclusiveShowcase } from '@/components/sections/ExclusiveShowcase';
 import { LifestyleImage } from '@/components/sections/LifestyleImage';
 import { OlfactoryNotes } from '@/components/sections/OlfactoryNotes';
+import { FragranceCollection } from '@/components/sections/FragranceCollection';
+import { getAllProducts } from '@/lib/products';
 import type { Product } from '@/types/product';
 
 interface FragranceDetailProps {
@@ -18,6 +20,7 @@ export async function FragranceDetail({ product }: FragranceDetailProps) {
   const translate = await getTranslations();
   const translateDetail = await getTranslations('detail');
   const lifestyle = product.images.find((image) => image.role === 'lifestyle');
+  const allProducts = await getAllProducts();
 
   return (
     <>
@@ -36,6 +39,7 @@ export async function FragranceDetail({ product }: FragranceDetailProps) {
           />
         ) : null}
         <OlfactoryNotes product={product} />
+        <FragranceCollection activeSlug={product.slug} fragrances={allProducts} />
       </main>
       <AppFooter />
     </>

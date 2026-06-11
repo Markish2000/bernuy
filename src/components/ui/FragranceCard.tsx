@@ -7,23 +7,29 @@ import type { Product } from '@/types/product';
 
 interface FragranceCardProps {
   readonly product: Product;
+  readonly active?: boolean;
 }
 
 /** Card de fragancia: botella + nombre + meta. Hover revela carácter + CTA. */
-export function FragranceCard({ product }: FragranceCardProps) {
+export function FragranceCard({ product, active = false }: FragranceCardProps) {
   const translate = useTranslations();
   const thumb = product.images.find((image) => image.role === 'thumb') ?? product.images[0];
 
   return (
     <Link
-      className="group relative block overflow-hidden rounded-card border border-accent/[0.12] bg-[image:var(--card-gradient)] px-6 pb-[34px] pt-[46px] shadow-card transition-[transform,border-color,box-shadow] duration-500 hover:-translate-y-[6px] hover:border-accent/50 hover:shadow-card-hover"
+      aria-current={active ? 'page' : undefined}
+      className={`group relative block overflow-hidden rounded-card border bg-[image:var(--card-gradient)] px-6 pb-[34px] pt-[46px] shadow-card transition-[transform,border-color,box-shadow] duration-500 hover:-translate-y-[6px] hover:shadow-card-hover ${
+        active
+          ? 'border-accent shadow-card-hover'
+          : 'border-accent/[0.12] hover:border-accent/50'
+      }`}
       href={`/fragancias/${product.slug}`}
     >
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-0 h-[200px] w-3/5 -translate-x-1/2 bg-[radial-gradient(ellipse_at_center_top,rgba(202,164,90,0.14),rgba(0,0,0,0)_70%)]"
-      />
-
+      {active ? (
+        <span className="absolute right-4 top-4 z-10 rounded-[2px] border border-accent/60 bg-accent/10 px-[10px] py-[5px] font-mono text-[9px] uppercase tracking-eyebrow-sm text-accent">
+          {translate('collection.current')}
+        </span>
+      ) : null}
       <div className="relative flex h-[210px] items-center justify-center">
         <Image
           alt={translate(thumb.altKey)}

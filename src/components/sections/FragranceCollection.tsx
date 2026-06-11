@@ -5,10 +5,11 @@ import type { Product } from '@/types/product';
 
 interface FragranceCollectionProps {
   readonly fragrances: Product[];
+  readonly activeSlug?: string;
 }
 
 /** Colección: título + grilla de 6 FragranceCard (reveal escalonado). */
-export async function FragranceCollection({ fragrances }: FragranceCollectionProps) {
+export async function FragranceCollection({ fragrances, activeSlug }: FragranceCollectionProps) {
   const translate = await getTranslations('collection');
 
   return (
@@ -32,7 +33,7 @@ export async function FragranceCollection({ fragrances }: FragranceCollectionPro
       <div className="mx-auto mt-16 grid max-w-content grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3">
         {fragrances.map((product, index) => (
           <ScrollReveal key={product.slug} delay={index * 0.1} y={30}>
-            <FragranceCard product={product} />
+            <FragranceCard active={product.slug === activeSlug} product={product} />
           </ScrollReveal>
         ))}
       </div>

@@ -17,11 +17,6 @@ export function FragranceHero({ product }: FragranceHeroProps) {
 
   return (
     <header className="relative flex min-h-screen items-center overflow-hidden px-5 pt-[120px] sm:px-6 lg:px-12" id="top">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute right-[6%] top-[30%] h-[620px] w-[620px] max-w-[90vw] bg-[radial-gradient(circle,rgba(202,164,90,0.10)_0%,rgba(202,164,90,0.03)_40%,rgba(0,0,0,0)_70%)]"
-      />
-
       <div className="relative mx-auto grid w-full max-w-detail grid-cols-1 items-center gap-10 md:grid-cols-[1.05fr_0.95fr]">
         <div className="order-2 md:order-1">
           <Link

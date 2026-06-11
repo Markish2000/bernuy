@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useTransition } from 'react';
+import { useEffect, useRef, useState, useTransition } from 'react';
 import { useLocale } from 'next-intl';
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname, useRouter } from '@/i18n/navigation';
@@ -35,6 +35,19 @@ export function LanguageSwitcher({ label }: LanguageSwitcherProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+
+    function handlePointerDown(event: MouseEvent) {
+      if (!containerRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener('pointerdown', handlePointerDown);
+    return () => document.removeEventListener('pointerdown', handlePointerDown);
+  }, [open]);
 
   function selectLocale(next: Locale) {
     setOpen(false);
@@ -44,7 +57,7 @@ export function LanguageSwitcher({ label }: LanguageSwitcherProps) {
   }
 
   return (
-    <div className="relative">
+    <div className="relative" ref={containerRef}>
       <button
         aria-expanded={open}
         aria-haspopup="listbox"
