@@ -1,14 +1,10 @@
 import { defineRouting } from 'next-intl/routing';
 
 export const locales = [
-  // Español — Latinoamérica
-  'es-AR', 'es-MX', 'es-CL', 'es-CO', 'es-PE', 'es-UY', 'es-PY', 'es-BO',
-  'es-EC', 'es-VE', 'es-CR', 'es-GT', 'es-PA', 'es-DO', 'es-HN', 'es-SV',
-  'es-NI', 'es-PR',
-  // Español genérico (fallback)
-  'es',
-  // Portugués (Brasil) + Inglés (opcional)
-  'pt-BR', 'en-US',
+  'es', // Español
+  'en', // Inglés
+  'pt', // Portugués
+  'fr', // Francés
 ] as const;
 
 export type Locale = (typeof locales)[number];
@@ -20,7 +16,7 @@ export function isLocale(value: string): value is Locale {
 
 export const routing = defineRouting({
   locales,
-  defaultLocale: 'es-AR',
+  defaultLocale: 'es',
   localePrefix: 'as-needed',
   localeDetection: true,
 });

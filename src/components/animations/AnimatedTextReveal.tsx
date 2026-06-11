@@ -18,8 +18,8 @@ interface AnimatedTextRevealProps {
 }
 
 /**
- * Revela texto. `sweep` = loop horizontal del título editorial (CSS, ya
- * desactivado en mobile y reduced-motion). `fade` = aparición con GSAP.
+ * Revela texto. `sweep` = deriva horizontal continua del título editorial
+ * (CSS, desactivada en reduced-motion). `fade` = aparición con GSAP.
  */
 export function AnimatedTextReveal({
   children,

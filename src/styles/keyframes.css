@@ -3,12 +3,12 @@
  * Es lo único que no puede ir inline. Hovers/transiciones van como utilidades Tailwind.
  */
 
-/* Título de bloque editorial: entra por derecha, se asienta, sale por izquierda — LOOP.
+/* Título de bloque editorial: entra por derecha, se esconde por izquierda — LOOP.
    El h2 es UNA sola palabra dentro de un contenedor overflow:hidden. */
 @keyframes titleSweep {
   0% { transform: translateX(64%); opacity: 0; }
-  20% { transform: translateX(0); opacity: 1; }
-  76% { transform: translateX(0); opacity: 1; }
+  25% { opacity: 1; }
+  75% { opacity: 1; }
   100% { transform: translateX(-64%); opacity: 0; }
 }
 
@@ -26,7 +26,7 @@
 
 .animate-title-sweep {
   display: inline-block;
-  animation: titleSweep 6.5s cubic-bezier(0.5, 0, 0.2, 1) infinite;
+  animation: titleSweep 2s linear infinite;
   will-change: transform, opacity;
 }
 
@@ -38,13 +38,6 @@
 .animate-bob-arrow {
   animation: bobArrow 2.2s ease-in-out infinite;
   will-change: transform, opacity;
-}
-
-/* Mobile: el sweep horizontal puede causar overflow → fade simple. */
-@media (max-width: 640px) {
-  .animate-title-sweep {
-    animation: none;
-  }
 }
 
 /* Reduced motion: sin loops ni parallax; estado final inmediato. */

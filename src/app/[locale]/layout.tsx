@@ -7,6 +7,7 @@ import { isLocale, routing } from '@/i18n/routing';
 import { buildMetadata } from '@/lib/seo';
 import { site } from '@/config/site';
 import { ThemeProvider, themeInitScript } from '@/components/providers/ThemeProvider';
+import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
 import { JsonLd } from '@/components/seo/JsonLd';
 import '@/styles/globals.css';
 
@@ -78,7 +79,9 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           {translateA11y('skipToContent')}
         </a>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <SmoothScrollProvider>{children}</SmoothScrollProvider>
+          </ThemeProvider>
         </NextIntlClientProvider>
         <JsonLd data={organizationLd} />
       </body>

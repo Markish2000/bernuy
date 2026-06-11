@@ -26,7 +26,7 @@ const config: Config = {
         'gold-3': 'var(--gold-3)',
         'gold-4': 'var(--gold-4)',
         'gold-5': 'var(--gold-5)',
-        accent: 'var(--accent)',
+        accent: 'rgb(var(--accent-rgb) / <alpha-value>)',
         hairline: 'var(--hairline)',
       },
       fontFamily: {

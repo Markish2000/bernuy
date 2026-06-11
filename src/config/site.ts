@@ -12,5 +12,5 @@ export const site = {
 export const features = {
   ecommerce: false, // activa precios, carrito, checkout
   favorites: false,
-  i18nExtended: true, // los 21 locales
+  i18nExtended: false, // 4 idiomas: es, en, pt, fr
 } as const;
