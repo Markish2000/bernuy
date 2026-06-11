@@ -25,7 +25,7 @@ export function NoteCard({ alt, image, items, tierLabel }: NoteCardProps) {
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(9,8,7,0)_60%,rgba(9,8,7,0.55)_100%)]"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_60%,rgba(0,0,0,0.55)_100%)]"
         />
       </div>
       <h3 className="mt-6 font-display text-[27px] font-medium tracking-title text-text-primary">

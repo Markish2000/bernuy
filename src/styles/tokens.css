@@ -34,9 +34,9 @@
   --bg-elevated: #0a0908;
   --bg-sunken: #000000;
   --surface-card: #0b0a08;
-  --text-primary: #f1e8d4;
-  --text-body: #9d978b;
-  --text-muted: #7c766b;
+  --text-primary: #ffffff;
+  --text-body: #d6d6d6;
+  --text-muted: #8f8f8f;
   --gold-label: #8a6f3e;
   --hairline: rgba(202, 164, 90, 0.14);
   --gold-1: #7a5c2e;
@@ -47,7 +47,7 @@
   --accent: #caa45a;
   --accent-rgb: 202 164 90;
   --selection-bg: #caa45a;
-  --selection-fg: #0a0908;
+  --selection-fg: #000000;
 
   --gold-gradient: linear-gradient(180deg, #7a5c2e 0%, #c9a253 24%, #f6e6b4 50%, #d8b86c 64%, #8a6736 100%);
   --card-gradient: linear-gradient(180deg, #100e0b, #0b0a08);

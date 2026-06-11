@@ -26,7 +26,7 @@ export function LifestyleImage({ alt, height, src, width }: LifestyleImageProps)
           />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(9,8,7,0)_55%,rgba(9,8,7,0.55)_100%)]"
+            className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_55%,rgba(0,0,0,0.55)_100%)]"
           />
         </div>
       </ScrollReveal>

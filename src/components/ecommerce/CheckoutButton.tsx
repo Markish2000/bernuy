@@ -6,7 +6,7 @@ interface CheckoutButtonProps {
 export function CheckoutButton({ label }: CheckoutButtonProps) {
   return (
     <button
-      className="w-full rounded-[2px] bg-accent/90 py-3 font-sans text-[12px] uppercase tracking-eyebrow-sm text-[#0a0908]"
+      className="w-full rounded-[2px] bg-accent/90 py-3 font-sans text-[12px] uppercase tracking-eyebrow-sm text-[#000000]"
       disabled
       type="button"
     >

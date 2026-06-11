@@ -48,23 +48,23 @@ export function EditorialBlock({
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(9,8,7,0)_58%,rgba(9,8,7,0.4)_100%)]"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_58%,rgba(0,0,0,0.4)_100%)]"
       />
     </div>
   );
 
   const textColumn = (
     <div className={cn(reverse ? 'md:order-1' : 'md:order-2')}>
-      <span className="font-mono text-[11px] tracking-eyebrow text-[#7a6a44]">{number}</span>
+      <span className="font-mono text-[11px] tracking-eyebrow text-accent">{number}</span>
       <div className="my-[14px] mb-[26px] overflow-hidden">
         <AnimatedTextReveal
-          className="inline-block whitespace-nowrap font-display text-[46px] font-normal tracking-title text-text-primary"
+          className="inline-block whitespace-nowrap font-display text-[46px] font-normal tracking-title text-white"
           variant="sweep"
         >
           {translate(titleKey)}
         </AnimatedTextReveal>
       </div>
-      <p className="font-sans text-[14px] font-light leading-[2] tracking-[0.02em] text-text-body">
+      <p className="font-sans text-[14px] font-light leading-[2] tracking-[0.02em] text-white">
         {translate(bodyKey)}
       </p>
     </div>

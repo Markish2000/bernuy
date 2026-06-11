@@ -19,13 +19,13 @@ export function FragranceHero({ product }: FragranceHeroProps) {
     <header className="relative flex min-h-screen items-center overflow-hidden px-5 pt-[120px] sm:px-6 lg:px-12" id="top">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-[6%] top-[30%] h-[620px] w-[620px] max-w-[90vw] bg-[radial-gradient(circle,rgba(202,164,90,0.10)_0%,rgba(202,164,90,0.03)_40%,rgba(9,8,7,0)_70%)]"
+        className="pointer-events-none absolute right-[6%] top-[30%] h-[620px] w-[620px] max-w-[90vw] bg-[radial-gradient(circle,rgba(202,164,90,0.10)_0%,rgba(202,164,90,0.03)_40%,rgba(0,0,0,0)_70%)]"
       />
 
       <div className="relative mx-auto grid w-full max-w-detail grid-cols-1 items-center gap-10 md:grid-cols-[1.05fr_0.95fr]">
         <div className="order-2 md:order-1">
           <Link
-            className="mb-7 inline-flex items-center gap-[9px] font-mono text-[11px] uppercase tracking-eyebrow-sm text-[#8a7f6a] transition-colors duration-[350ms] hover:text-[#d8c089]"
+            className="mb-7 inline-flex items-center gap-[9px] font-mono text-[11px] uppercase tracking-eyebrow-sm text-text-muted transition-colors duration-[350ms] hover:text-accent"
             href="/#fragancias"
           >
             <span aria-hidden="true">←</span>
@@ -44,7 +44,7 @@ export function FragranceHero({ product }: FragranceHeroProps) {
 
           <div className="mt-10 flex gap-[30px]">
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-eyebrow-sm text-[#7a6a44]">
+              <div className="font-mono text-[10px] uppercase tracking-eyebrow-sm text-accent">
                 {translateDetail('specs.format')}
               </div>
               <div className="mt-[6px] font-display text-[21px] text-text-primary">
@@ -53,7 +53,7 @@ export function FragranceHero({ product }: FragranceHeroProps) {
             </div>
             <div className="w-px bg-accent/[0.18]" />
             <div>
-              <div className="font-mono text-[10px] uppercase tracking-eyebrow-sm text-[#7a6a44]">
+              <div className="font-mono text-[10px] uppercase tracking-eyebrow-sm text-accent">
                 {translateDetail('specs.family')}
               </div>
               <div className="mt-[6px] font-display text-[21px] text-text-primary">

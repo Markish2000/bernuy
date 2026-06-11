@@ -19,12 +19,12 @@ export async function FragranceCollection({ fragrances }: FragranceCollectionPro
     >
       <ScrollReveal y={30}>
         <h2
-          className="font-display text-[clamp(34px,5vw,58px)] font-normal uppercase tracking-h2 text-text-primary"
+          className="font-display text-[clamp(34px,5vw,58px)] font-normal uppercase tracking-h2 text-white"
           id="fragrances-title"
         >
           {translate('title')}
         </h2>
-        <p className="mt-[14px] font-display text-[18px] italic tracking-spec text-gold-label">
+        <p className="mt-[14px] font-display text-[18px] italic tracking-spec text-accent">
           {translate('subtitle')}
         </p>
       </ScrollReveal>
