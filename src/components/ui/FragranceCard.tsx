@@ -55,7 +55,7 @@ export function FragranceCard({ product, active = false }: FragranceCardProps) {
         <div className="font-mono text-[11px] uppercase tracking-eyebrow-sm text-[#d8c089]">
           {translate(product.characterKey)}
         </div>
-        <p className="mt-[14px] font-display text-[17px] italic leading-[1.55] text-text-body">
+        <p className="mt-[14px] font-display text-[17px] italic leading-[1.55] text-[#d6d6d6]">
           {translate(product.taglineKey)}
         </p>
         <span className="mt-[22px] inline-block rounded-[2px] border border-accent/50 px-[30px] py-[11px] font-sans text-[11.5px] uppercase tracking-eyebrow-sm text-[#e7d6a4] transition-colors duration-[400ms] group-hover:bg-accent/90 group-hover:text-[#000000]">

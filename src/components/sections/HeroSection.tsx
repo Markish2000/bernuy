@@ -87,7 +87,7 @@ export function HeroSection({ fragrances }: HeroSectionProps) {
         })}
       </div>
 
-      <p className="relative mt-[34px] max-w-[540px] font-sans text-[14.5px] font-light leading-[1.85] tracking-[0.06em] text-white">
+      <p className="relative mt-[34px] max-w-[540px] font-sans text-[14.5px] font-light leading-[1.85] tracking-[0.06em] text-text-body">
         {translate('intro')}
       </p>
 
@@ -95,7 +95,7 @@ export function HeroSection({ fragrances }: HeroSectionProps) {
         className="relative mt-[54px] flex flex-col items-center gap-[10px]"
         href="#nosotros"
       >
-        <span className="font-mono text-[10.5px] uppercase tracking-eyebrow text-white">
+        <span className="font-mono text-[10.5px] uppercase tracking-eyebrow text-text-muted">
           {translate('scroll')}
         </span>
         <span

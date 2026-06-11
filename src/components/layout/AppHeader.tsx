@@ -50,7 +50,7 @@ export function AppHeader({ variant = 'transparent' }: AppHeaderProps) {
           <nav aria-label="Principal" className="hidden items-center gap-11 md:flex">
             {mainNav.map((item) => {
               const linkClass =
-                'font-sans text-[12.5px] uppercase tracking-nav text-text-body transition-colors duration-[350ms] hover:text-[#f3e4b8]';
+                'font-sans text-[12.5px] uppercase tracking-nav text-text-body transition-colors duration-[350ms] hover:text-gold-3';
 
               if (item.labelKey === 'nav.fragrances') {
                 return (
@@ -64,10 +64,10 @@ export function AppHeader({ variant = 'transparent' }: AppHeaderProps) {
                         {products.map((product) => (
                           <li key={product.slug}>
                             <Link
-                              className="flex items-center gap-3 px-5 py-2.5 font-sans text-[12.5px] uppercase tracking-nav text-text-body transition-colors duration-200 hover:text-[#f3e4b8]"
+                              className="flex items-center gap-3 px-5 py-2.5 font-sans text-[12.5px] uppercase tracking-nav text-text-body transition-colors duration-200 hover:text-gold-3"
                               href={`/fragancias/${product.slug}`}
                             >
-                              <span className="font-serif text-[15px] text-[#c9a86a]">
+                              <span className="font-serif text-[15px] text-accent">
                                 {product.letter}
                               </span>
                               {translateProducts(`${product.slug}.name`)}

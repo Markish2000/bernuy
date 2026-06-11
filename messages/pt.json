@@ -70,7 +70,7 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "share": "Compartilhar",
-    "legal": "Copyright © 2024 Bernuy · Todos os direitos reservados. O conteúdo, design e gráficos deste site estão protegidos pelas leis de direitos autorais e propriedade intelectual."
+    "legal": "Copyright © {year} Bernuy · Todos os direitos reservados. O conteúdo, design e gráficos deste site estão protegidos pelas leis de direitos autorais e propriedade intelectual."
   },
   "seo": {
     "home": {

@@ -20,7 +20,7 @@ export async function FragranceCollection({ fragrances, activeSlug }: FragranceC
     >
       <ScrollReveal y={30}>
         <h2
-          className="font-display text-[clamp(34px,5vw,58px)] font-normal uppercase tracking-h2 text-white"
+          className="font-display text-[clamp(34px,5vw,58px)] font-normal uppercase tracking-h2 text-text-primary"
           id="fragrances-title"
         >
           {translate('title')}

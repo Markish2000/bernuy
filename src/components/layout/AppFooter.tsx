@@ -31,7 +31,7 @@ export async function AppFooter() {
             {mainNav.map((item) => (
               <Link
                 key={item.labelKey}
-                className="font-sans text-[13px] tracking-[0.1em] text-text-body transition-colors duration-[350ms] hover:text-[#f3e4b8]"
+                className="font-sans text-[13px] tracking-[0.1em] text-text-body transition-colors duration-[350ms] hover:text-gold-3"
                 href={`/#${item.hash}`}
               >
                 {item.labelKey === 'nav.about' ? translateNav('about') : translateNav('fragrances')}
@@ -52,14 +52,14 @@ export async function AppFooter() {
             {translateFooter('contact')}
           </h2>
           <a
-            className="block font-sans text-[13px] tracking-[0.08em] text-text-body transition-colors duration-[350ms] hover:text-[#f3e4b8]"
+            className="block font-sans text-[13px] tracking-[0.08em] text-text-body transition-colors duration-[350ms] hover:text-gold-3"
             href={`mailto:${site.email}`}
           >
             {site.email}
           </a>
           <div className="mt-[18px] flex justify-center gap-[18px] md:justify-end">
             <a
-              className="font-sans text-xs tracking-[0.16em] text-text-muted transition-colors hover:text-[#f3e4b8]"
+              className="font-sans text-xs tracking-[0.16em] text-text-muted transition-colors hover:text-gold-3"
               href={site.social.instagram}
               rel="noopener noreferrer"
               target="_blank"
@@ -67,7 +67,7 @@ export async function AppFooter() {
               {translateFooter('instagram')}
             </a>
             <a
-              className="font-sans text-xs tracking-[0.16em] text-text-muted transition-colors hover:text-[#f3e4b8]"
+              className="font-sans text-xs tracking-[0.16em] text-text-muted transition-colors hover:text-gold-3"
               href={site.social.facebook}
               rel="noopener noreferrer"
               target="_blank"
@@ -86,7 +86,7 @@ export async function AppFooter() {
           {shareLinks.map((item) => (
             <a
               key={item.label}
-              className="font-sans text-xs tracking-[0.16em] text-text-muted transition-colors hover:text-[#f3e4b8]"
+              className="font-sans text-xs tracking-[0.16em] text-text-muted transition-colors hover:text-gold-3"
               href={item.href}
               rel="noopener noreferrer"
               target="_blank"
@@ -99,7 +99,7 @@ export async function AppFooter() {
 
       <div className="mx-auto mt-[28px] max-w-content border-t border-white/5 pt-[22px] text-center">
         <p className="font-sans text-[11px] leading-[1.7] tracking-[0.08em] text-text-muted">
-          {translateFooter('legal')}
+          {translateFooter('legal', { year: new Date().getFullYear() })}
         </p>
       </div>
     </footer>

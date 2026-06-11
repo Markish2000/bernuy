@@ -58,13 +58,13 @@ export function EditorialBlock({
       <span className="font-mono text-[11px] tracking-eyebrow text-accent">{number}</span>
       <div className="my-[14px] mb-[26px] overflow-hidden">
         <AnimatedTextReveal
-          className="inline-block whitespace-nowrap font-display text-[46px] font-normal tracking-title text-white"
+          className="inline-block whitespace-nowrap font-display text-[46px] font-normal tracking-title text-text-primary"
           variant="sweep"
         >
           {translate(titleKey)}
         </AnimatedTextReveal>
       </div>
-      <p className="font-sans text-[14px] font-light leading-[2] tracking-[0.02em] text-white">
+      <p className="font-sans text-[14px] font-light leading-[2] tracking-[0.02em] text-text-body">
         {translate(bodyKey)}
       </p>
     </div>
