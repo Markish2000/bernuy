@@ -63,6 +63,10 @@ export function HeroSection({ fragrances }: HeroSectionProps) {
       >
         {fragrances.map((fragrance) => {
           const slug = fragrance.slug;
+          const isSilver = slug === 'b' || slug === 'r' || slug === 'u';
+          const hoverGlow = isSilver
+            ? 'hover:drop-shadow-[0_30px_50px_rgba(214,214,222,0.55)]'
+            : 'hover:drop-shadow-[0_30px_50px_rgba(202,164,90,0.55)]';
           return (
             <Link
               key={slug}
@@ -72,7 +76,7 @@ export function HeroSection({ fragrances }: HeroSectionProps) {
             >
               <Image
                 alt={fragrance.letter}
-                className="block h-[clamp(108px,26vw,420px)] w-auto origin-bottom transition-[transform,filter] duration-[550ms] ease-premium hover:-translate-y-[18px] hover:scale-[1.08] hover:brightness-110 hover:drop-shadow-[0_30px_50px_rgba(202,164,90,0.55)] motion-reduce:transform-none"
+                className={`block h-[clamp(108px,26vw,420px)] w-auto origin-bottom transition-[transform,filter] duration-[550ms] ease-premium hover:-translate-y-[18px] hover:scale-[1.08] hover:brightness-110 ${hoverGlow} motion-reduce:transform-none`}
                 height={318}
                 priority
                 src={`/assets/brand/logo-letter-${slug}.png`}
