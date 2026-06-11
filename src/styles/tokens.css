@@ -7,6 +7,7 @@
   --bg: #f6f3ec;
   --bg-elevated: #ffffff;
   --bg-sunken: #efeae0;
+  --bg-sunken-rgb: 239 234 224;
   --surface-card: #ffffff;
   --text-primary: #1c1813;
   --text-body: #4a443a;
@@ -33,6 +34,7 @@
   --bg: #000000;
   --bg-elevated: #0a0908;
   --bg-sunken: #000000;
+  --bg-sunken-rgb: 0 0 0;
   --surface-card: #0b0a08;
   --text-primary: #ffffff;
   --text-body: #d6d6d6;

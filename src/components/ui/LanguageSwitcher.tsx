@@ -87,7 +87,7 @@ export function LanguageSwitcher({ label }: LanguageSwitcherProps) {
               <li key={locale}>
                 <button
                   aria-selected={locale === current}
-                  className="flex w-full items-center justify-between rounded-[3px] px-3 py-2 text-left font-sans text-[12.5px] tracking-[0.04em] text-text-body transition-colors hover:bg-accent/10 hover:text-text-primary aria-selected:text-accent"
+                  className="flex w-full items-center justify-between rounded-[3px] px-3 py-2 text-left font-sans text-[12.5px] tracking-[0.04em] text-text-body transition-colors hover:text-gold-3 aria-selected:text-accent"
                   onClick={() => selectLocale(locale)}
                   role="option"
                   type="button"

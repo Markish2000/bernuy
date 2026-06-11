@@ -15,7 +15,7 @@ const config: Config = {
       colors: {
         bg: 'var(--bg)',
         'bg-elevated': 'var(--bg-elevated)',
-        'bg-sunken': 'var(--bg-sunken)',
+        'bg-sunken': 'rgb(var(--bg-sunken-rgb) / <alpha-value>)',
         'surface-card': 'var(--surface-card)',
         'text-primary': 'var(--text-primary)',
         'text-body': 'var(--text-body)',
