@@ -30,9 +30,9 @@
 
 .dark {
   /* DARK (diseño aprobado — valores exactos del prototipo) */
-  --bg: #090807;
-  --bg-elevated: #100e0b;
-  --bg-sunken: #070605;
+  --bg: #000000;
+  --bg-elevated: #0a0908;
+  --bg-sunken: #000000;
   --surface-card: #0b0a08;
   --text-primary: #f1e8d4;
   --text-body: #9d978b;

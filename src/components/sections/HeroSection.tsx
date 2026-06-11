@@ -57,12 +57,7 @@ export function HeroSection({ fragrances }: HeroSectionProps) {
       id="top"
     >
       <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-[18%] h-[760px] w-[760px] max-w-[120vw] -translate-x-1/2 bg-[radial-gradient(circle,rgba(202,164,90,0.10)_0%,rgba(202,164,90,0.03)_38%,rgba(9,8,7,0)_68%)]"
-      />
-
-      <div
-        className="relative flex w-full max-w-monogram items-end justify-center gap-[clamp(8px,2.6vw,46px)] drop-shadow-[0_18px_50px_rgba(202,164,90,0.18)]"
+        className="relative flex w-full max-w-monogram items-end justify-center gap-[clamp(8px,2.6vw,46px)]"
         ref={monogramRef}
         style={{ opacity: 0 }}
       >
