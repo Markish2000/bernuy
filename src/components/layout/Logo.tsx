@@ -1,16 +1,8 @@
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 
-const LETTERS = [
-  { char: 'b', width: 97 },
-  { char: 'e', width: 96 },
-  { char: 'r', width: 93 },
-  { char: 'n', width: 101 },
-  { char: 'u', width: 106 },
-  { char: 'y', width: 104 },
-] as const;
-
-const NATURAL_HEIGHT = 318;
+const NATURAL_WIDTH = 384;
+const NATURAL_HEIGHT = 184;
 
 interface LogoProps {
   readonly className?: string;
@@ -20,39 +12,37 @@ interface LogoProps {
 }
 
 /**
- * Monograma BERNUY con las 6 letras-imagen. El contenedor lleva aria-label
- * único y cada <img> alt="" (decorativas) para no leerlas letra por letra.
+ * Logo BERNUY (imagen única). El contenedor lleva aria-label y el <img>
+ * alt="" (decorativa) para no leer el nombre dos veces.
  */
 export function Logo({ className, href = '/', label, size = 24 }: LogoProps) {
-  const letters = LETTERS.map(({ char, width }) => (
+  const image = (
     <Image
-      key={char}
-      alt=""
+      alt="Bernuy"
       aria-hidden="true"
       height={NATURAL_HEIGHT}
-      src={`/assets/brand/logo-letter-${char}.png`}
+      priority
+      src="/assets/brand/logo-full.png"
       style={{ height: `${size}px`, width: 'auto' }}
-      width={width}
+      width={NATURAL_WIDTH}
     />
-  ));
-
-  const gap = size <= 24 ? 'gap-[5px]' : 'gap-[7px]';
+  );
 
   if (href) {
     return (
       <Link
         aria-label={label}
-        className={`inline-flex items-end ${gap} ${className ?? ''}`}
+        className={`inline-flex items-center ${className ?? ''}`}
         href={href}
       >
-        {letters}
+        {image}
       </Link>
     );
   }
 
   return (
-    <span aria-label={label} className={`inline-flex items-end ${gap} ${className ?? ''}`}>
-      {letters}
+    <span aria-label={label} className={`inline-flex items-center ${className ?? ''}`}>
+      {image}
     </span>
   );
 }
