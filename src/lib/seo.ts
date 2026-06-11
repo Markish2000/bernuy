@@ -23,9 +23,14 @@ export function buildMetadata({ description, locale, path, title }: BuildMetadat
   }
   languages['x-default'] = localizedPath(routing.defaultLocale, path);
 
+  const tabTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
+
   return {
     metadataBase: new URL(site.url),
-    title,
+    title: {
+      default: tabTitle,
+      template: `%s | ${site.name}`,
+    },
     description,
     alternates: {
       canonical: localizedPath(locale, path),
@@ -35,14 +40,14 @@ export function buildMetadata({ description, locale, path, title }: BuildMetadat
       type: 'website',
       siteName: site.name,
       locale,
-      title,
+      title: tabTitle,
       description,
       url: localizedPath(locale, path),
       images: [{ url: '/assets/og/og-default.png', width: 1200, height: 630, alt: site.name }],
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: tabTitle,
       description,
     },
   };

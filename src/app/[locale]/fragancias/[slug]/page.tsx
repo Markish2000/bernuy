@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: FragrancePageProps): Promise<
     description: translate(product.descriptionKey),
     locale,
     path: `/fragancias/${slug}`,
-    title: `${character} · ${site.name}`,
+    title: character,
   });
 }
 
