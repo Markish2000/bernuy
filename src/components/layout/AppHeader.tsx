@@ -45,7 +45,7 @@ export function AppHeader({ variant = 'transparent' }: AppHeaderProps) {
         )}
       >
         <div className="flex items-center justify-between px-5 sm:px-6 lg:px-12">
-          <Logo href="/" label={translateA11y('logoLabel')} size={24} />
+          <Logo href="/" label={translateA11y('logoLabel')} size={44} />
 
           <nav aria-label="Principal" className="hidden items-center gap-11 md:flex">
             {mainNav.map((item) => {

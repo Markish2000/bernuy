@@ -87,7 +87,7 @@ export function HeroSection({ fragrances }: HeroSectionProps) {
         })}
       </div>
 
-      <p className="relative mt-[34px] max-w-[540px] font-sans text-[14.5px] font-light leading-[1.85] tracking-[0.06em] text-text-body">
+      <p className="relative mt-[34px] max-w-[540px] font-sans text-[14.5px] font-light leading-[2.5] tracking-[0.06em] text-text-body">
         {translate('intro')}
       </p>
 
