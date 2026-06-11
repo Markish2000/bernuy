@@ -1,0 +1,208 @@
+{
+  "common": {
+    "brand": "BERNUY",
+    "tagline": "L'art du parfum",
+    "currency": "ARS"
+  },
+  "a11y": {
+    "logoLabel": "BERNUY",
+    "skipToContent": "Saltar al contenido",
+    "themeToggle": "Cambiar entre tema claro y oscuro",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "languageSwitcher": "Cambiar idioma",
+    "scrollCue": "Desplazarse hacia abajo"
+  },
+  "nav": {
+    "about": "Nosotros",
+    "fragrances": "Fragancias"
+  },
+  "hero": {
+    "intro": "Descubre la magia de nuestros exclusivos perfumes. Déjate llevar por una experiencia sensorial única, donde cada esencia cuenta una historia.",
+    "scroll": "Desliza",
+    "letterTitle": "Descubrir la fragancia {letter}"
+  },
+  "editorial": {
+    "elegancia": {
+      "title": "Elegancia",
+      "alt": "Elegancia BERNUY",
+      "body": "Determina los tiempos exactos, mide la mejor actitud y produce una pausa que intriga en todo lo que rinde. Ser parte de una historia que la creaste para llegar lejos y hacer notar tu presencia solo con un aroma. Bernuy está hecho de los límites que no puedes plantear, un más allá, un retrato y prenda a una manera para retomar tu inigualable toque que rebela la mejor sensación humana."
+    },
+    "personalidad": {
+      "title": "Personalidad",
+      "alt": "Personalidad BERNUY",
+      "body": "Marca la diferencia y la excelencia en todo. Bernuy tiene el secreto para la decisión está en ti. ¿Aceptas o no el reto? Está en juego lo que muestras cuando sales a la calle a realizar tus actividades diarias: debes ser quien marque un punto de atención alto, simplemente por algo que a simple vista no se ve, pero se disfruta."
+    },
+    "sensualidad": {
+      "title": "Sensualidad",
+      "alt": "Sensualidad BERNUY",
+      "body": "Tú, mujer que deseas presentarte de la mejor manera posible a donde quiera que vayas, no permitas que falte lo que puede impulsarte a ser la más hermosa entre las que te rodean: eres hermosa en cuanto usas Bernuy. Eres diferente al resto, conocedora de la calidad y de la diferencia entre lo genuino y lo placentero. Convierte tus días en inolvidables joyas de momentos en los que fuiste tú, natural, y triunfaste solo por usar con inteligencia la mejor fragancia."
+    }
+  },
+  "collection": {
+    "title": "Nuestras fragancias",
+    "subtitle": "A nossa fragrância",
+    "size": "Eau de Parfum · 100 ml",
+    "explore": "Explorar"
+  },
+  "detail": {
+    "back": "Volver a fragancias",
+    "scrollCue": "Deslizá y descubre más sobre esta fragancia",
+    "exclusive": "Una fragancia exclusiva",
+    "exclusiveEyebrow": "Exclusividad en cada detalle",
+    "olfactory": "Familia olfativa",
+    "noteAlt": "Notas de {tier}",
+    "specs": {
+      "format": "Formato",
+      "family": "Familia",
+      "formatValue": "Eau de Parfum · 100 ml"
+    },
+    "tiers": {
+      "top": "Salida",
+      "heart": "Cuerpo",
+      "base": "Fondo"
+    }
+  },
+  "footer": {
+    "links": "Links",
+    "contact": "Contacto",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "legal": "Copyright © 2024 Bernuy · Todos los derechos reservados. El contenido, diseño y gráfica de este sitio web están protegidos por las leyes de derechos de autor y propiedad intelectual."
+  },
+  "seo": {
+    "home": {
+      "title": "BERNUY · L'art du parfum",
+      "description": "BERNUY — casa de perfumería de lujo. Descubre seis fragancias exclusivas donde cada esencia cuenta una historia."
+    },
+    "fragrancesLabel": "Fragancias"
+  },
+  "products": {
+    "b": {
+      "name": "Audaz",
+      "character": "Rebelde y aventurero",
+      "tagline": "Una fragancia para un hombre de gusto.",
+      "description": "Una fragancia para un hombre de gusto. Una composición masculina que se abre con notas frescas de bergamota y lima, equilibradas por una nota sofisticada de Lavanda con un acorde floral de Violeta y Rosa. El carácter profundo y amaderado lo aporta el fondo, compuesto de delicadeza seca de Vetiver con una estela cálida y envolvente de Pachulí y Cuero.",
+      "family": "Fougère Aromática Amaderada",
+      "specFamily": "Fougère Amaderada",
+      "quote": "Una fragancia para un hombre de gusto.",
+      "notes": {
+        "top": "Bergamota · Ozono · Lima",
+        "heart": "Lavanda · Violeta · Rosa · Clavo",
+        "base": "Vetiver · Pachulí · Cuero"
+      },
+      "images": {
+        "bottle": "Perfume BERNUY B — frasco",
+        "bottleDetail": "Perfume BERNUY B en detalle",
+        "box": "Estuche BERNUY B",
+        "thumb": "Fragancia BERNUY B",
+        "lifestyle": "Estilo de vida BERNUY B"
+      }
+    },
+    "e": {
+      "name": "Eterno",
+      "character": "Irresistible y sensual",
+      "tagline": "Una fragancia pura que brilla con estilo.",
+      "description": "Facetas frutales a través de una jugosa FRAMBUESA. Una abundancia de AZAFRÁN fresco, pétalos luminosos con un floral limpio y adictivo en su corazón, crea un ambiente elegante y natural. La sofisticación surge en el fondo gracias a una combinación contemporánea de vainilla y almizcles, dando una excepcional sensación de segunda piel.",
+      "family": "Oriental Gourmand",
+      "specFamily": "Oriental Gourmand",
+      "quote": "Una fragancia pura y resplandeciente que brilla con estilo.",
+      "notes": {
+        "top": "Frambuesa · Azafrán",
+        "heart": "Coco · Floral",
+        "base": "Gourmand · Almizcle · Vainilla"
+      },
+      "images": {
+        "bottle": "Perfume BERNUY E — frasco",
+        "bottleDetail": "Perfume BERNUY E en detalle",
+        "box": "Estuche BERNUY E",
+        "thumb": "Fragancia BERNUY E",
+        "lifestyle": "Estilo de vida BERNUY E"
+      }
+    },
+    "r": {
+      "name": "Radiante",
+      "character": "Inteligente y fuerte",
+      "tagline": "Un intenso aura masculina.",
+      "description": "La fragancia ofrece un intenso aura masculina. En la parte superior, la viva frescura de la bergamota y la lima se combina con la pimienta picante. En el corazón, una mezcla aromática de lavanda, clavo y rosa crea una masculinidad elegante. Finalmente, la fragancia revela una estela sensual de ámbar, almizcle y balsámico cálido.",
+      "family": "Cítrica Aromática Especiada",
+      "specFamily": "Cítrica Especiada",
+      "quote": "La fragancia ofrece un intenso aura masculina.",
+      "notes": {
+        "top": "Bergamota · Pimienta · Lima",
+        "heart": "Lavanda · Rosa · Clavo",
+        "base": "Ámbar · Almizcle · Balsámico en Polvo"
+      },
+      "images": {
+        "bottle": "Perfume BERNUY R — frasco",
+        "bottleDetail": "Perfume BERNUY R en detalle",
+        "box": "Estuche BERNUY R",
+        "thumb": "Fragancia BERNUY R",
+        "lifestyle": "Estilo de vida BERNUY R"
+      }
+    },
+    "n": {
+      "name": "Nocturno",
+      "character": "Romántica y apasionada",
+      "tagline": "Un bouquet seductor de moras y rosa.",
+      "description": "La fragancia abre con un acorde aterciopelado de moras especiadas y cítricos. Notas que conducen al corazón de una rosa rosada y violeta. Las características básicas, extracto cálido de ámbar, los tonos más oscuros de pachulí y una dulce vainilla.",
+      "family": "Floral Frutal Amaderado",
+      "specFamily": "Floral Frutal Amaderado",
+      "quote": "Un bouquet seductor de moras especiadas y rosa rosada, con un fondo cálido de ámbar, pachulí y vainilla dulce.",
+      "notes": {
+        "top": "Pimienta · Mandarina · Arándano",
+        "heart": "Rosa · Clavel · Violeta",
+        "base": "Almizcle · Pachulí · Ámbar · Vainilla"
+      },
+      "images": {
+        "bottle": "Perfume BERNUY N — frasco",
+        "bottleDetail": "Perfume BERNUY N en detalle",
+        "box": "Estuche BERNUY N",
+        "thumb": "Fragancia BERNUY N",
+        "lifestyle": "Estilo de vida BERNUY N"
+      }
+    },
+    "u": {
+      "name": "Único",
+      "character": "Elegancia y estilo",
+      "tagline": "Distinción en cada nota.",
+      "description": "Una fragancia sofisticada y envolvente que despliega su carácter con notas vibrantes de cítricos y especias. Un corazón floral refinado se entrelaza con maderas nobles, mientras que el fondo cálido de ámbar y almizcle deja una estela inconfundible de distinción y buen gusto.",
+      "family": "Cítrica Especiada Ambarada",
+      "specFamily": "Cítrica Especiada Ambarada",
+      "quote": "Distinción en cada nota: cítricos vibrantes, un corazón floral refinado y una estela cálida de ámbar.",
+      "notes": {
+        "top": "Bergamota · Pimienta Rosa · Limón",
+        "heart": "Jazmín · Iris · Madera de Cedro",
+        "base": "Ámbar · Almizcle · Sándalo"
+      },
+      "images": {
+        "bottle": "Perfume BERNUY U — frasco",
+        "bottleDetail": "Perfume BERNUY U en detalle",
+        "box": "Estuche BERNUY U",
+        "thumb": "Fragancia BERNUY U",
+        "lifestyle": "Estilo de vida BERNUY U"
+      }
+    },
+    "y": {
+      "name": "Sublime",
+      "character": "Misteriosa y refinada",
+      "tagline": "Femenina, verde y fresca.",
+      "description": "Cautivadora fragancia femenina verde y fresca, que te transportará a la exuberante naturaleza. Nuevo bouquet impregnado con una cautivadora presencia cítrica y notas herbales, creando una sensación innovadora y vanguardista, que te sumergirá en la combinación perfecta de carácter y rebeldía original.",
+      "family": "Cítrica Floral Amaderada",
+      "specFamily": "Cítrica Floral Amaderado",
+      "quote": "Una fragancia femenina fresca y verde que fusiona naturaleza exuberante con un toque vanguardista de carácter y rebeldía.",
+      "notes": {
+        "top": "Pomelo · Limón · Bergamota",
+        "heart": "Flor de Naranjo · Rosa · Mango",
+        "base": "Pachulí · Vetiver · Almizcle · Cedro"
+      },
+      "images": {
+        "bottle": "Perfume BERNUY Y — frasco",
+        "bottleDetail": "Perfume BERNUY Y en detalle",
+        "box": "Estuche BERNUY Y",
+        "thumb": "Fragancia BERNUY Y",
+        "lifestyle": "Estilo de vida BERNUY Y"
+      }
+    }
+  }
+}

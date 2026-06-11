@@ -1,0 +1,70 @@
+@import './tokens.css';
+@import './keyframes.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text-body);
+    font-family: var(--font-jost), 'Jost', system-ui, sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--selection-bg);
+    color: var(--selection-fg);
+  }
+
+  /* Foco visible oro de alto contraste (08-accessibility). */
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  /* Texto con relleno de oro líquido (logo, títulos, detalles). */
+  .gold-text {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .hairline {
+    border-color: var(--hairline);
+  }
+}
+
+/* Link "Skip to content" — visible solo al enfocar. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 12px 20px;
+  background: var(--bg-sunken);
+  color: var(--text-primary);
+  border: 1px solid var(--accent);
+}
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+}
