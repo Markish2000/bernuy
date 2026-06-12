@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import type { VariantSelectorProps } from './interfaces';
 
-/** STUB: lee availableSizes (hoy [100]). Sin efecto sobre el carrito. */
+/** STUB: lee availableSizes (hoy [50]). Sin efecto sobre el carrito. */
 export function VariantSelector({ availableSizes }: VariantSelectorProps) {
   const [selected, setSelected] = useState(availableSizes[0]);
 

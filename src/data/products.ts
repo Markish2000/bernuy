@@ -3,7 +3,7 @@ import type { Product } from '@/types/product';
 /**
  * MOCK de las 6 fragancias (B·E·R·N·U·Y). Único archivo que cambia al migrar a API.
  * Copy visible → messages.products.<slug>.* (i18n). Aquí solo estructura + keys.
- * Variantes: hoy un único 100 ml con precio placeholder.
+ * Variantes: hoy un único 50 ml con precio placeholder.
  */
 
 function bottleHero(slug: string) {
@@ -79,15 +79,15 @@ function notes(slug: string) {
     },
   ];
 }
-function variant100(slug: string, price: number) {
+function variant50(slug: string, price: number) {
   return [
     {
       available: true,
       currency: 'ARS',
-      id: `${slug}-100`,
+      id: `${slug}-50`,
       price,
-      size: 100,
-      sku: `BERNUY-${slug.toUpperCase()}-100`,
+      size: 50,
+      sku: `BERNUY-${slug.toUpperCase()}-50`,
       stock: 25,
     },
   ];
@@ -101,7 +101,7 @@ function makeProduct(
   price: number,
 ): Product {
   return {
-    availableSizes: [100],
+    availableSizes: [50],
     characterKey: `products.${slug}.character`,
     descriptionKey: `products.${slug}.description`,
     familyKey: `products.${slug}.family`,
@@ -125,7 +125,7 @@ function makeProduct(
     slug,
     specFamilyKey: `products.${slug}.specFamily`,
     taglineKey: `products.${slug}.tagline`,
-    variants: variant100(slug, price),
+    variants: variant50(slug, price),
   };
 }
 

@@ -50,7 +50,7 @@
   "collection": {
     "title": "Nos fragrances",
     "subtitle": "A nossa fragrância",
-    "size": "Eau de Parfum · 100 ml",
+    "size": "Eau de Parfum · 50 ml",
     "explore": "Explorer",
     "current": "Vous consultez",
     "catalog": {
@@ -96,7 +96,7 @@
     "specs": {
       "format": "Format",
       "family": "Famille",
-      "formatValue": "Eau de Parfum · 100 ml"
+      "formatValue": "Eau de Parfum · 50 ml"
     },
     "tiers": {
       "top": "Tête",
