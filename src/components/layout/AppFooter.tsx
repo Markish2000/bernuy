@@ -28,15 +28,20 @@ export async function AppFooter() {
             {translateFooter('links')}
           </h2>
           <div className="flex flex-col items-center gap-[14px] md:items-start">
-            {mainNav.map((item) => (
+            {mainNav.map((item) => {
+              let href = item.href;
+              if (item.labelKey === 'nav.fragrances') href = '/fragancias';
+              else if (item.hash) href = `/#${item.hash}`;
+              return (
               <Link
                 key={item.labelKey}
                 className="font-sans text-[13px] tracking-[0.1em] text-text-body transition-colors duration-[350ms] hover:text-gold-3"
-                href={item.labelKey === 'nav.fragrances' ? '/fragancias' : `/#${item.hash}`}
+                href={href}
               >
                 {translateNav(item.labelKey.replace('nav.', ''))}
               </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
 

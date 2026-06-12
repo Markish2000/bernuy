@@ -26,6 +26,7 @@ export default async function LandingPage({ params }: LandingPageProps) {
         <section
           aria-label="Nosotros"
           className="mx-auto max-w-content px-5 pb-[30px] pt-10 sm:px-6 lg:px-12"
+          id="elegance"
         >
           {editorial.map((entry) => (
             <EditorialBlock

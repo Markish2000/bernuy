@@ -89,7 +89,7 @@ export function HeroSection({ fragrances }: HeroSectionProps) {
 
       <a
         className="relative mt-[54px] flex flex-col items-center gap-[10px]"
-        href="#fragancias"
+        href="#elegance"
       >
         <span className="font-mono text-[10.5px] uppercase tracking-eyebrow text-text-muted">
           {translate('scroll')}
