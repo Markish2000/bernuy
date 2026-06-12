@@ -94,7 +94,7 @@ export function AppHeader({ variant = 'transparent' }: AppHeaderProps) {
           <button
             aria-expanded={menuOpen}
             aria-label={translateA11y('openMenu')}
-            className="font-mono text-[18px] text-text-primary md:hidden"
+            className="font-mono text-[26px] leading-none text-text-primary md:hidden"
             onClick={() => setMenuOpen(true)}
             type="button"
           >

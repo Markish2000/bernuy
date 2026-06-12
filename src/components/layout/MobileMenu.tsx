@@ -63,7 +63,7 @@ export function MobileMenu({ onClose, open }: MobileMenuProps) {
           <div className="flex items-center justify-end px-5 py-6">
             <button
               aria-label={translateA11y('closeMenu')}
-              className="font-mono text-[11px] uppercase tracking-eyebrow text-text-body hover:text-accent"
+              className="font-mono text-[22px] leading-none text-text-body hover:text-accent"
               onClick={onClose}
               type="button"
             >
@@ -85,14 +85,18 @@ export function MobileMenu({ onClose, open }: MobileMenuProps) {
                         type="button"
                       >
                         {translateNav('fragrances')}
-                        <span
+                        <svg
                           aria-hidden="true"
-                          className={`text-accent transition-transform duration-300 ${
+                          className={`h-3 w-3 text-accent transition-transform duration-300 ${
                             fragrancesOpen ? 'rotate-180' : ''
                           }`}
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          viewBox="0 0 24 24"
                         >
-                          ⌄
-                        </span>
+                          <path d="m6 9 6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
                       </button>
 
                       <AnimatePresence initial={false}>
