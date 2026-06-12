@@ -26,7 +26,7 @@ function localeDisplayName(locale: string, displayIn: string): string {
 }
 
 /** Cambia el locale (router push localizado). Lista navegable con dropdown. */
-export function LanguageSwitcher({ label }: LanguageSwitcherProps) {
+export function LanguageSwitcher({ label, placement = 'down' }: LanguageSwitcherProps) {
   const current = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -74,9 +74,11 @@ export function LanguageSwitcher({ label }: LanguageSwitcherProps) {
         {open ? (
           <motion.ul
             animate={{ opacity: 1, y: 0 }}
-            className="absolute right-0 z-50 mt-8 max-h-72 w-56 overflow-y-auto rounded-card border border-hairline bg-bg-sunken p-2 backdrop-blur-md"
-            exit={{ opacity: 0, y: -8 }}
-            initial={{ opacity: 0, y: -8 }}
+            className={`absolute right-0 z-50 max-h-72 w-56 overflow-y-auto rounded-card border border-hairline bg-bg-sunken p-2 backdrop-blur-md ${
+              placement === 'up' ? 'bottom-full mb-3' : 'mt-8'
+            }`}
+            exit={{ opacity: 0, y: placement === 'up' ? 8 : -8 }}
+            initial={{ opacity: 0, y: placement === 'up' ? 8 : -8 }}
             role="listbox"
             transition={{ duration: 0.18 }}
           >

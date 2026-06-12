@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
 import { mainNav } from '@/config/navigation';
 import { products } from '@/data/products';
+import { Logo } from '@/components/layout/Logo';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 import type { MobileMenuProps } from './interfaces';
@@ -60,7 +61,8 @@ export function MobileMenu({ onClose, open }: MobileMenuProps) {
           role="dialog"
           transition={{ duration: 0.25 }}
         >
-          <div className="flex items-center justify-end px-5 py-6">
+          <div className="flex items-center justify-between px-5 py-[22px]">
+            <Logo href="/" label={translateA11y('logoLabel')} onClick={onClose} size={44} />
             <button
               aria-label={translateA11y('closeMenu')}
               className="font-mono text-[22px] leading-none text-text-body hover:text-accent"
@@ -145,7 +147,7 @@ export function MobileMenu({ onClose, open }: MobileMenuProps) {
 
             <div className="flex items-center gap-8 pt-2">
               <ThemeToggle label={translateA11y('themeToggle')} />
-              <LanguageSwitcher label={translateA11y('languageSwitcher')} />
+              <LanguageSwitcher label={translateA11y('languageSwitcher')} placement="up" />
             </div>
           </nav>
         </motion.div>

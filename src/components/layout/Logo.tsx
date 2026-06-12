@@ -9,7 +9,7 @@ const NATURAL_HEIGHT = 184;
  * Logo BERNUY (imagen única). El contenedor lleva aria-label y el <img>
  * alt="" (decorativa) para no leer el nombre dos veces.
  */
-export function Logo({ className, href = '/', label, size = 24 }: LogoProps) {
+export function Logo({ className, href = '/', label, onClick, size = 24 }: LogoProps) {
   const image = (
     <Image
       alt="Bernuy"
@@ -32,6 +32,7 @@ export function Logo({ className, href = '/', label, size = 24 }: LogoProps) {
         aria-label={label}
         className={`inline-flex items-center ${motion} ${className ?? ''}`}
         href={href}
+        onClick={onClick}
       >
         {image}
       </Link>
