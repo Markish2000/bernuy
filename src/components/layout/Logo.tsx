@@ -22,11 +22,15 @@ export function Logo({ className, href = '/', label, size = 24 }: LogoProps) {
     />
   );
 
+  const motion =
+    'transform-gpu transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ' +
+    'will-change-transform hover:scale-[1.05] active:scale-95 active:duration-150';
+
   if (href) {
     return (
       <Link
         aria-label={label}
-        className={`inline-flex items-center ${className ?? ''}`}
+        className={`inline-flex items-center ${motion} ${className ?? ''}`}
         href={href}
       >
         {image}
@@ -35,7 +39,7 @@ export function Logo({ className, href = '/', label, size = 24 }: LogoProps) {
   }
 
   return (
-    <span aria-label={label} className={`inline-flex items-center ${className ?? ''}`}>
+    <span aria-label={label} className={`inline-flex items-center ${motion} ${className ?? ''}`}>
       {image}
     </span>
   );

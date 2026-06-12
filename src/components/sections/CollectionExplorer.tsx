@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CollectionFilter } from './CollectionFilter';
 import type { CollectionExplorerProps, CollectionFilterValue } from './interfaces';
 
@@ -11,6 +12,12 @@ import type { CollectionExplorerProps, CollectionFilterValue } from './interface
  */
 export function CollectionExplorer({ labels, men, women }: CollectionExplorerProps) {
   const [filter, setFilter] = useState<CollectionFilterValue>('all');
+
+  // Al cambiar el filtro, un grupo oculto puede subir al viewport. Sus ScrollTrigger
+  // tienen posiciones cacheadas (stale) y no se disparan solos → recalcular layout.
+  useEffect(() => {
+    ScrollTrigger.refresh();
+  }, [filter]);
 
   return (
     <>

@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import type { KeyboardEvent } from 'react';
+import { motion } from 'framer-motion';
 import type { CollectionFilterProps, CollectionFilterValue } from './interfaces';
 
 const ORDER: CollectionFilterValue[] = ['all', 'men', 'women'];
@@ -34,9 +35,9 @@ export function CollectionFilter({ value, labels, onChange }: CollectionFilterPr
               refs.current[index] = node;
             }}
             aria-checked={selected}
-            className={`rounded-pill px-[26px] py-[11px] font-sans text-[11.5px] uppercase tracking-eyebrow-sm transition-all duration-[400ms] ${
+            className={`relative rounded-pill px-[26px] py-[11px] font-sans text-[11.5px] uppercase tracking-eyebrow-sm transition-colors duration-[400ms] ${
               selected
-                ? 'bg-[linear-gradient(180deg,var(--gold-4),var(--gold-5))] font-medium text-[#0a0908]'
+                ? 'font-medium text-[#0a0908]'
                 : 'font-light text-text-body hover:text-gold-3'
             }`}
             onClick={() => onChange(option)}
@@ -45,7 +46,15 @@ export function CollectionFilter({ value, labels, onChange }: CollectionFilterPr
             tabIndex={selected ? 0 : -1}
             type="button"
           >
-            {labels[option]}
+            {selected && (
+              <motion.span
+                aria-hidden
+                className="absolute inset-0 rounded-pill bg-[linear-gradient(180deg,var(--gold-4),var(--gold-5))]"
+                layoutId="collection-filter-pill"
+                transition={{ type: 'spring', stiffness: 420, damping: 36 }}
+              />
+            )}
+            <span className="relative">{labels[option]}</span>
           </button>
         );
       })}

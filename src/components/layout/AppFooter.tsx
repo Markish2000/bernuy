@@ -32,9 +32,9 @@ export async function AppFooter() {
               <Link
                 key={item.labelKey}
                 className="font-sans text-[13px] tracking-[0.1em] text-text-body transition-colors duration-[350ms] hover:text-gold-3"
-                href={`/#${item.hash}`}
+                href={item.labelKey === 'nav.fragrances' ? '/fragancias' : `/#${item.hash}`}
               >
-                {item.labelKey === 'nav.about' ? translateNav('about') : translateNav('fragrances')}
+                {translateNav(item.labelKey.replace('nav.', ''))}
               </Link>
             ))}
           </div>
