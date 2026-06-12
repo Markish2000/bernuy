@@ -16,6 +16,7 @@ export type ImageRole =
   | 'three-quarter'
   | 'box'
   | 'lifestyle'
+  | 'pyramid'
   | 'hero'
   | 'thumb'
   | 'atomizer'

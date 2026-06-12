@@ -51,6 +51,15 @@ function lifestyle(slug: string) {
     width: 1136,
   };
 }
+function pyramid(slug: string) {
+  return {
+    altKey: `products.${slug}.images.pyramid`,
+    height: 1242,
+    role: 'pyramid' as const,
+    src: `/assets/products/${slug}/pyramid-${slug}.png`,
+    width: 1242,
+  };
+}
 function notes(slug: string) {
   return [
     {
@@ -99,7 +108,14 @@ function makeProduct(
     featured: true,
     gender,
     id: slug,
-    images: [bottleHero(slug), bottleDetail(slug), box(slug), bottleThumb(slug), lifestyle(slug)],
+    images: [
+      bottleHero(slug),
+      bottleDetail(slug),
+      box(slug),
+      bottleThumb(slug),
+      lifestyle(slug),
+      pyramid(slug),
+    ],
     intensity: 'eau-de-parfum',
     letter,
     nameKey: `products.${slug}.name`,
@@ -118,6 +134,6 @@ export const products: Product[] = [
   makeProduct('e', 'E', 2, 'femenino', 89000),
   makeProduct('r', 'R', 3, 'masculino', 89000),
   makeProduct('n', 'N', 4, 'femenino', 89000),
-  makeProduct('u', 'U', 5, 'unisex', 89000),
+  makeProduct('u', 'U', 5, 'masculino', 89000),
   makeProduct('y', 'Y', 6, 'femenino', 89000),
 ];

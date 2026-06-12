@@ -41,7 +41,7 @@ export async function AppFooter() {
         </div>
 
         <div className="flex flex-col items-center md:order-2">
-          <Logo href="/" label={translateA11y('logoLabel')} size={34} />
+          <Logo href="/" label={translateA11y('logoLabel')} size={56} />
           <p className="mt-[14px] font-display text-[13px] italic tracking-[0.18em] text-text-muted">
             {translateCommon('tagline')}
           </p>

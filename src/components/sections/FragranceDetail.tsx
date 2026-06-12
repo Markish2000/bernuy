@@ -8,6 +8,7 @@ import { ExclusiveShowcase } from '@/components/sections/ExclusiveShowcase';
 import { LifestyleImage } from '@/components/sections/LifestyleImage';
 import { OlfactoryNotes } from '@/components/sections/OlfactoryNotes';
 import { FragranceCollection } from '@/components/sections/FragranceCollection';
+import { FragrancePager } from '@/components/sections/FragrancePager';
 import { getAllProducts } from '@/lib/products';
 import type { FragranceDetailProps } from './interfaces';
 
@@ -36,6 +37,7 @@ export async function FragranceDetail({ product }: FragranceDetailProps) {
         ) : null}
         <OlfactoryNotes product={product} />
         <FragranceCollection activeSlug={product.slug} fragrances={allProducts} />
+        <FragrancePager fragrances={allProducts} product={product} />
       </main>
       <AppFooter />
     </>

@@ -48,26 +48,42 @@ export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
     gsap.ticker.add(tick);
     gsap.ticker.lagSmoothing(0);
 
-    // Anclas internas (#nosotros, #top, etc.) con scroll suave de Lenis.
+    // Anclas internas con scroll suave de Lenis. Acepta tanto anclas planas
+    // (#nosotros) como hrefs con prefijo de locale del Link de next-intl
+    // (/es/#nosotros): se intercepta cualquier enlace cuyo destino exista
+    // en la página actual.
     const handleAnchorClick = (event: MouseEvent) => {
       const target = (event.target as HTMLElement | null)?.closest('a');
       if (!target) return;
 
       const href = target.getAttribute('href');
-      if (!href || !href.startsWith('#') || href === '#') return;
+      if (!href) return;
 
-      const destination = document.querySelector(href);
+      const hashIndex = href.indexOf('#');
+      if (hashIndex === -1) return;
+
+      const hash = href.slice(hashIndex);
+      if (hash === '#') return;
+
+      const destination = document.querySelector(hash);
       if (!destination) return;
 
       event.preventDefault();
-      lenis.scrollTo(destination as HTMLElement, { offset: -80 });
+      lenis.scrollTo(destination as HTMLElement, {
+        offset: -80,
+        // Recorrido largo y sedoso para una sensación premium.
+        duration: 1.8,
+        easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
+      });
     };
 
-    document.addEventListener('click', handleAnchorClick);
+    // Capture phase: corre antes que el onClick del Link de next-intl, de modo
+    // que preventDefault aborte su navegación y Lenis controle el scroll.
+    document.addEventListener('click', handleAnchorClick, true);
 
     return () => {
       gsap.ticker.remove(tick);
-      document.removeEventListener('click', handleAnchorClick);
+      document.removeEventListener('click', handleAnchorClick, true);
       lenis.destroy();
       lenisRef.current = null;
     };

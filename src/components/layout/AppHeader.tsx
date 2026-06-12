@@ -52,7 +52,7 @@ export function AppHeader({ variant = 'transparent' }: AppHeaderProps) {
               if (item.labelKey === 'nav.fragrances') {
                 return (
                   <div className="group relative" key={item.labelKey}>
-                    <Link className={linkClass} href={`/#${item.hash}`}>
+                    <Link className={linkClass} href="/fragancias">
                       {translateNav('fragrances')}
                     </Link>
 
@@ -78,8 +78,12 @@ export function AppHeader({ variant = 'transparent' }: AppHeaderProps) {
               }
 
               return (
-                <Link className={linkClass} href={`/#${item.hash}`} key={item.labelKey}>
-                  {translateNav('about')}
+                <Link
+                  className={linkClass}
+                  href={item.hash ? `/#${item.hash}` : item.href}
+                  key={item.labelKey}
+                >
+                  {translateNav(item.labelKey.replace('nav.', ''))}
                 </Link>
               );
             })}

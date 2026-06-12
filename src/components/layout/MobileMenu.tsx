@@ -129,11 +129,11 @@ export function MobileMenu({ onClose, open }: MobileMenuProps) {
                 return (
                   <Link
                     className="font-sans text-base uppercase tracking-nav text-text-primary transition-colors hover:text-[#f3e4b8]"
-                    href={`/#${item.hash}`}
+                    href={item.hash ? `/#${item.hash}` : item.href}
                     key={item.labelKey}
                     onClick={onClose}
                   >
-                    {translateNav('about')}
+                    {translateNav(item.labelKey.replace('nav.', ''))}
                   </Link>
                 );
               })}

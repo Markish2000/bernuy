@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
+import { Link } from '@/i18n/navigation';
 import { FragranceCard } from '@/components/ui/FragranceCard';
 import type { FragranceCollectionProps } from './interfaces';
 
@@ -32,6 +33,21 @@ export async function FragranceCollection({ fragrances, activeSlug }: FragranceC
           </ScrollReveal>
         ))}
       </div>
+
+      <ScrollReveal className="mt-[60px]" y={20}>
+        <Link
+          className="group inline-flex items-center gap-3 rounded-pill border border-accent/40 px-[34px] py-[14px] font-sans text-[12px] uppercase tracking-eyebrow-sm text-gold-3 transition-colors duration-[400ms] hover:border-accent hover:bg-accent/10"
+          href="/fragancias"
+        >
+          {translate('catalog.viewAll')}
+          <span
+            aria-hidden="true"
+            className="transition-transform duration-[400ms] ease-premium group-hover:translate-x-1"
+          >
+            →
+          </span>
+        </Link>
+      </ScrollReveal>
     </section>
   );
 }

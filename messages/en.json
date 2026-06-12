@@ -14,6 +14,7 @@
     "scrollCue": "Scroll down"
   },
   "nav": {
+    "home": "Home",
     "about": "About",
     "fragrances": "Fragrances"
   },
@@ -51,10 +52,42 @@
     "subtitle": "A nossa fragrância",
     "size": "Eau de Parfum · 100 ml",
     "explore": "Explore",
-    "current": "You're viewing"
+    "current": "You're viewing",
+    "catalog": {
+      "eyebrow": "Eau de Parfum",
+      "title": "The Collection",
+      "subtitle": "Six essences. One single signature.",
+      "origin": {
+        "eyebrow": "The origin of the name",
+        "headline": "Six bottles, six letters. Together, our fragrances spell BERNUY.",
+        "alt": "The six BERNUY fragrances forming the word BERNUY"
+      },
+      "filter": {
+        "all": "All",
+        "men": "For him",
+        "women": "For her"
+      },
+      "groups": {
+        "men": {
+          "eyebrow": "For him",
+          "title": "Men’s collection"
+        },
+        "women": {
+          "eyebrow": "For her",
+          "title": "Women’s collection"
+        }
+      },
+      "count": "{count} fragrances",
+      "viewAll": "View the full collection"
+    }
   },
   "detail": {
     "back": "Back to fragrances",
+    "nav": {
+      "label": "Fragrance navigation",
+      "prev": "Previous",
+      "next": "Next"
+    },
     "scrollCue": "Scroll and discover more about this fragrance",
     "exclusive": "An exclusive fragrance",
     "exclusiveEyebrow": "Exclusivity in every detail",
@@ -105,7 +138,8 @@
         "bottleDetail": "BERNUY B perfume in detail",
         "box": "BERNUY B case",
         "thumb": "BERNUY B fragrance",
-        "lifestyle": "BERNUY B lifestyle"
+        "lifestyle": "BERNUY B lifestyle",
+        "pyramid": "BERNUY B olfactory pyramid"
       }
     },
     "e": {
@@ -126,7 +160,8 @@
         "bottleDetail": "BERNUY E perfume in detail",
         "box": "BERNUY E case",
         "thumb": "BERNUY E fragrance",
-        "lifestyle": "BERNUY E lifestyle"
+        "lifestyle": "BERNUY E lifestyle",
+        "pyramid": "BERNUY E olfactory pyramid"
       }
     },
     "r": {
@@ -147,7 +182,8 @@
         "bottleDetail": "BERNUY R perfume in detail",
         "box": "BERNUY R case",
         "thumb": "BERNUY R fragrance",
-        "lifestyle": "BERNUY R lifestyle"
+        "lifestyle": "BERNUY R lifestyle",
+        "pyramid": "BERNUY R olfactory pyramid"
       }
     },
     "n": {
@@ -168,7 +204,8 @@
         "bottleDetail": "BERNUY N perfume in detail",
         "box": "BERNUY N case",
         "thumb": "BERNUY N fragrance",
-        "lifestyle": "BERNUY N lifestyle"
+        "lifestyle": "BERNUY N lifestyle",
+        "pyramid": "BERNUY N olfactory pyramid"
       }
     },
     "u": {
@@ -189,7 +226,8 @@
         "bottleDetail": "BERNUY U perfume in detail",
         "box": "BERNUY U case",
         "thumb": "BERNUY U fragrance",
-        "lifestyle": "BERNUY U lifestyle"
+        "lifestyle": "BERNUY U lifestyle",
+        "pyramid": "BERNUY U olfactory pyramid"
       }
     },
     "y": {
@@ -210,7 +248,8 @@
         "bottleDetail": "BERNUY Y perfume in detail",
         "box": "BERNUY Y case",
         "thumb": "BERNUY Y fragrance",
-        "lifestyle": "BERNUY Y lifestyle"
+        "lifestyle": "BERNUY Y lifestyle",
+        "pyramid": "BERNUY Y olfactory pyramid"
       }
     }
   }

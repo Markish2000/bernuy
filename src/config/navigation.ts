@@ -5,6 +5,7 @@ import type { NavItem } from './interfaces';
 export type { NavItem } from './interfaces';
 
 export const mainNav: NavItem[] = [
+  { hash: 'top', href: '/', labelKey: 'nav.home' },
   { hash: 'nosotros', href: '/', labelKey: 'nav.about' },
   { hash: 'fragancias', href: '/', labelKey: 'nav.fragrances' },
 ];

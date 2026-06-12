@@ -3,12 +3,14 @@
 import { useTranslations } from 'next-intl';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
 import { NoteCard } from '@/components/ui/NoteCard';
+import { OlfactoryPyramid } from '@/components/sections/OlfactoryPyramid';
 import type { OlfactoryNotesProps } from './interfaces';
 
 /** Familia olfativa + pirámide (Salida · Cuerpo · Fondo) con reveal escalonado. */
 export function OlfactoryNotes({ product }: OlfactoryNotesProps) {
   const translate = useTranslations();
   const translateDetail = useTranslations('detail');
+  const pyramid = product.images.find((image) => image.role === 'pyramid');
 
   return (
     <section
@@ -26,6 +28,15 @@ export function OlfactoryNotes({ product }: OlfactoryNotesProps) {
           {translate(product.familyKey)}
         </h2>
       </ScrollReveal>
+
+      {pyramid ? (
+        <OlfactoryPyramid
+          alt={translate(pyramid.altKey)}
+          height={pyramid.height}
+          src={pyramid.src}
+          width={pyramid.width}
+        />
+      ) : null}
 
       <div className="mt-[60px] grid grid-cols-1 gap-[30px] md:grid-cols-3">
         {product.notes.map((note, index) => {

@@ -19,7 +19,11 @@ function languageAlternates(path: string): Record<string, string> {
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const products = await getAllProducts();
-  const paths = ['', ...products.map((product) => `/fragancias/${product.slug}`)];
+  const paths = [
+    '',
+    '/fragancias',
+    ...products.map((product) => `/fragancias/${product.slug}`),
+  ];
 
   return paths.flatMap((path) =>
     locales.map((locale) => ({
