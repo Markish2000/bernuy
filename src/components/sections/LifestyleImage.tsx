@@ -2,13 +2,7 @@
 
 import Image from 'next/image';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
-
-interface LifestyleImageProps {
-  readonly alt: string;
-  readonly height: number;
-  readonly src: string;
-  readonly width: number;
-}
+import type { LifestyleImageProps } from './interfaces';
 
 /** Imagen ancha lifestyle con overlay degradado inferior. */
 export function LifestyleImage({ alt, height, src, width }: LifestyleImageProps) {

@@ -1,9 +1,5 @@
 import { ProductCard } from '@/components/ecommerce/ProductCard';
-import type { Product } from '@/types/product';
-
-interface ProductGridProps {
-  readonly products: Product[];
-}
+import type { ProductGridProps } from './interfaces';
 
 /** STUB: grilla reutilizable de ProductCard (extraída de FragranceCollection). */
 export function ProductGrid({ products }: ProductGridProps) {

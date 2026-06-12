@@ -1,7 +1,4 @@
-interface AddToCartButtonProps {
-  readonly label: string;
-  readonly variantId: string;
-}
+import type { AddToCartButtonProps } from './interfaces';
 
 /** STUB: deshabilitado hasta activar features.ecommerce. Sin lógica de carrito. */
 export function AddToCartButton({ label, variantId }: AddToCartButtonProps) {

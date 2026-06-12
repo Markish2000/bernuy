@@ -1,12 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
 import { FragranceCard } from '@/components/ui/FragranceCard';
-import type { Product } from '@/types/product';
-
-interface FragranceCollectionProps {
-  readonly fragrances: Product[];
-  readonly activeSlug?: string;
-}
+import type { FragranceCollectionProps } from './interfaces';
 
 /** Colección: título + grilla de 6 FragranceCard (reveal escalonado). */
 export async function FragranceCollection({ fragrances, activeSlug }: FragranceCollectionProps) {

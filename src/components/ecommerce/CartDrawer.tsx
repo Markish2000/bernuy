@@ -1,14 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import type { ReactNode } from 'react';
-
-interface CartDrawerProps {
-  readonly children?: ReactNode;
-  readonly onClose: () => void;
-  readonly open: boolean;
-  readonly title: string;
-}
+import type { CartDrawerProps } from './interfaces';
 
 /** STUB: panel lateral con estructura + focus trap básico. Sin store de carrito. */
 export function CartDrawer({ children, onClose, open, title }: CartDrawerProps) {

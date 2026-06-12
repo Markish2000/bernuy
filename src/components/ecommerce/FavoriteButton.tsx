@@ -1,11 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-
-interface FavoriteButtonProps {
-  readonly label: string;
-  readonly productId: string;
-}
+import type { FavoriteButtonProps } from './interfaces';
 
 /** STUB local sin persistencia. Activable con features.favorites. */
 export function FavoriteButton({ label, productId }: FavoriteButtonProps) {

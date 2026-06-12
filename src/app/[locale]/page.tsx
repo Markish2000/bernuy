@@ -7,10 +7,7 @@ import { HeroSection } from '@/components/sections/HeroSection';
 import { EditorialBlock } from '@/components/sections/EditorialBlock';
 import { FragranceCollection } from '@/components/sections/FragranceCollection';
 import { ScrollProgressIndicator } from '@/components/animations/ScrollProgressIndicator';
-
-interface LandingPageProps {
-  readonly params: Promise<{ locale: string }>;
-}
+import type { LandingPageProps } from './interfaces';
 
 export default async function LandingPage({ params }: LandingPageProps) {
   const { locale } = await params;

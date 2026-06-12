@@ -3,11 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { FloatingBottle } from '@/components/animations/FloatingBottle';
-import type { Product } from '@/types/product';
-
-interface FragranceHeroProps {
-  readonly product: Product;
-}
+import type { FragranceHeroProps } from './interfaces';
 
 /** Hero de producto: back-link + carácter + specs + botella flotante. */
 export function FragranceHero({ product }: FragranceHeroProps) {

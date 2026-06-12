@@ -1,12 +1,5 @@
-import type { ReactNode } from 'react';
 import { FragranceCard } from '@/components/ui/FragranceCard';
-import type { Product } from '@/types/product';
-
-interface ProductCardProps {
-  readonly action?: ReactNode;
-  readonly price?: ReactNode;
-  readonly product: Product;
-}
+import type { ProductCardProps } from './interfaces';
 
 /**
  * STUB de tienda: hoy = FragranceCard. Reserva slots `price` y `action`

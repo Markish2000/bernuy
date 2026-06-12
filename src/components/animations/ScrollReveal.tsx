@@ -1,21 +1,12 @@
 'use client';
 
 import { useRef } from 'react';
-import type { ReactNode } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import type { ScrollRevealProps } from './interfaces';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
-
-interface ScrollRevealProps {
-  readonly children: ReactNode;
-  readonly className?: string;
-  readonly delay?: number;
-  readonly duration?: number;
-  readonly once?: boolean;
-  readonly y?: number;
-}
 
 /**
  * Wrapper presentacional que revela su hijo al entrar al viewport

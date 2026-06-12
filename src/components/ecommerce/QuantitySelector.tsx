@@ -1,12 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-
-interface QuantitySelectorProps {
-  readonly initial?: number;
-  readonly max?: number;
-  readonly min?: number;
-}
+import type { QuantitySelectorProps } from './interfaces';
 
 /** STUB controlado, sin store. Preparado para el carrito futuro. */
 export function QuantitySelector({ initial = 1, max = 9, min = 1 }: QuantitySelectorProps) {

@@ -4,13 +4,10 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing } from '@/i18n/routing';
 import { getAllProducts, getProductBySlug } from '@/lib/products';
 import { buildMetadata } from '@/lib/seo';
-import { site } from '@/config/site';
+import { buildFragranceBreadcrumbLd, buildProductLd } from '@/lib/structured-data';
 import { FragranceDetail } from '@/components/sections/FragranceDetail';
 import { JsonLd } from '@/components/seo/JsonLd';
-
-interface FragrancePageProps {
-  readonly params: Promise<{ locale: string; slug: string }>;
-}
+import type { FragrancePageProps } from './interfaces';
 
 export async function generateStaticParams() {
   const products = await getAllProducts();
@@ -45,37 +42,13 @@ export default async function FragrancePage({ params }: FragrancePageProps) {
 
   const translate = await getTranslations({ locale });
   const translateSeo = await getTranslations({ locale, namespace: 'seo' });
-  const heroImage = product.images.find((image) => image.role === 'hero') ?? product.images[0];
 
-  const productLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: `${site.name} ${product.letter} — ${translate(product.nameKey)}`,
-    description: translate(product.descriptionKey),
-    brand: { '@type': 'Brand', name: site.name },
-    category: translate(product.familyKey),
-    image: `${site.url}${heroImage.src}`,
-  };
-
-  const breadcrumbLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: site.name, item: site.url },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: translateSeo('fragrancesLabel'),
-        item: `${site.url}/fragancias`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: translate(product.characterKey),
-        item: `${site.url}/fragancias/${slug}`,
-      },
-    ],
-  };
+  const productLd = buildProductLd(product, translate);
+  const breadcrumbLd = buildFragranceBreadcrumbLd({
+    character: translate(product.characterKey),
+    fragrancesLabel: translateSeo('fragrancesLabel'),
+    slug,
+  });
 
   return (
     <>

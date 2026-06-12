@@ -1,6 +1,4 @@
-interface CheckoutButtonProps {
-  readonly label: string;
-}
+import type { CheckoutButtonProps } from './interfaces';
 
 /** STUB deshabilitado. Inicia checkout cuando features.ecommerce esté activo. */
 export function CheckoutButton({ label }: CheckoutButtonProps) {

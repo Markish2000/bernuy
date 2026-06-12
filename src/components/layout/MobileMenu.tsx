@@ -7,11 +7,7 @@ import { Link } from '@/i18n/navigation';
 import { mainNav } from '@/config/navigation';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
-
-interface MobileMenuProps {
-  readonly onClose: () => void;
-  readonly open: boolean;
-}
+import type { MobileMenuProps } from './interfaces';
 
 /** Panel de navegación mobile con focus trap básico y cierre con Esc. */
 export function MobileMenu({ onClose, open }: MobileMenuProps) {

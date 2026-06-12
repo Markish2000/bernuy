@@ -1,14 +1,5 @@
-import type { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
-
-interface SectionTitleProps {
-  readonly align?: 'center' | 'left';
-  readonly children?: ReactNode;
-  readonly eyebrow?: string;
-  readonly id?: string;
-  readonly subtitle?: string;
-  readonly title: string;
-}
+import type { SectionTitleProps } from './interfaces';
 
 /** Título de sección reutilizable: eyebrow (mono) + h2 (display) + subtítulo italic. */
 export function SectionTitle({

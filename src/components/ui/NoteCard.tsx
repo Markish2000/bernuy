@@ -1,15 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import type { NoteTier } from '@/types/product';
-
-interface NoteCardProps {
-  readonly alt: string;
-  readonly image: string;
-  readonly items: string;
-  readonly tierLabel: string;
-  readonly tier: NoteTier;
-}
+import type { NoteCardProps } from './interfaces';
 
 /** Tarjeta de capa olfativa: imagen 3/4 + título de capa + lista de notas. */
 export function NoteCard({ alt, image, items, tierLabel }: NoteCardProps) {

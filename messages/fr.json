@@ -17,6 +17,13 @@
     "about": "À propos",
     "fragrances": "Fragrances"
   },
+  "notFound": {
+    "eyebrow": "Erreur 404",
+    "title": "Cette essence s'est évanouie",
+    "body": "La page que vous cherchez n'existe pas ou a été déplacée. Laissez-vous guider vers nos essences.",
+    "home": "Retour à l'accueil",
+    "fragrances": "Voir les fragrances"
+  },
   "hero": {
     "intro": "Découvrez la magie de nos parfums exclusifs. Laissez-vous emporter par une expérience sensorielle unique, où chaque essence raconte une histoire.",
     "scroll": "Défiler",

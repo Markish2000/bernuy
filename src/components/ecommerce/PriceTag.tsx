@@ -1,8 +1,4 @@
-interface PriceTagProps {
-  readonly currency: string;
-  readonly locale: string;
-  readonly value: number;
-}
+import type { PriceTagProps } from './interfaces';
 
 /** Formatea precio por locale. Stub: usado cuando features.ecommerce esté activo. */
 export function PriceTag({ currency, locale, value }: PriceTagProps) {

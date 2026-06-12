@@ -3,11 +3,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
-import type { Product } from '@/types/product';
-
-interface ExclusiveShowcaseProps {
-  readonly product: Product;
-}
+import type { ExclusiveShowcaseProps } from './interfaces';
 
 /** "Una fragancia exclusiva": botella + estuche en gran formato + frase editorial. */
 export function ExclusiveShowcase({ product }: ExclusiveShowcaseProps) {

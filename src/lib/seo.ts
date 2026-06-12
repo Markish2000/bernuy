@@ -1,13 +1,7 @@
 import type { Metadata } from 'next';
 import { locales, routing } from '@/i18n/routing';
 import { site } from '@/config/site';
-
-interface BuildMetadataArgs {
-  readonly description: string;
-  readonly locale: string;
-  readonly path: string; // ej: '' (home) | '/fragancias/b'
-  readonly title: string;
-}
+import type { BuildMetadataArgs } from './interfaces';
 
 function localizedPath(locale: string, path: string): string {
   const suffix = path || '/';
@@ -27,6 +21,17 @@ export function buildMetadata({ description, locale, path, title }: BuildMetadat
 
   return {
     metadataBase: new URL(site.url),
+    manifest: '/manifest.webmanifest',
+    applicationName: site.name,
+    appleWebApp: {
+      capable: true,
+      title: site.name,
+      statusBarStyle: 'black-translucent',
+    },
+    icons: {
+      icon: [{ url: '/icons/icon-192.png', sizes: '192x192', type: 'image/png' }],
+      apple: [{ url: '/icons/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
+    },
     title: {
       default: tabTitle,
       template: `%s | ${site.name}`,
@@ -43,12 +48,13 @@ export function buildMetadata({ description, locale, path, title }: BuildMetadat
       title: tabTitle,
       description,
       url: localizedPath(locale, path),
-      images: [{ url: '/assets/og/og-default.png', width: 1200, height: 630, alt: site.name }],
+      images: [{ url: '/assets/og/og-default.png', width: 1200, height: 630, type: 'image/png', alt: site.name }],
     },
     twitter: {
       card: 'summary_large_image',
       title: tabTitle,
       description,
+      images: ['/assets/og/og-default.png'],
     },
   };
 }

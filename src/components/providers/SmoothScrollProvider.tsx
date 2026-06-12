@@ -1,16 +1,13 @@
 'use client';
 
-import { useEffect } from 'react';
-import type { ReactNode } from 'react';
+import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { usePathname } from '@/i18n/navigation';
+import type { SmoothScrollProviderProps } from './interfaces';
 
 gsap.registerPlugin(ScrollTrigger);
-
-interface SmoothScrollProviderProps {
-  readonly children: ReactNode;
-}
 
 /**
  * Scroll suave premium con inercia (Lenis), sincronizado al ticker de GSAP
@@ -18,8 +15,11 @@ interface SmoothScrollProviderProps {
  * (desactiva la inercia) e intercepta anclas (#id) con easing.
  */
 export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
+  const lenisRef = useRef<Lenis | null>(null);
+  const pathname = usePathname();
+
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia(
+    const prefersReducedMotion = globalThis.matchMedia(
       '(prefers-reduced-motion: reduce)',
     ).matches;
 
@@ -34,6 +34,8 @@ export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
       touchMultiplier: 1.4,
       smoothWheel: true,
     });
+
+    lenisRef.current = lenis;
 
     // Sincroniza ScrollTrigger con cada frame de Lenis.
     lenis.on('scroll', ScrollTrigger.update);
@@ -67,8 +69,15 @@ export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
       gsap.ticker.remove(tick);
       document.removeEventListener('click', handleAnchorClick);
       lenis.destroy();
+      lenisRef.current = null;
     };
   }, []);
+
+  // Reset al tope en cada cambio de ruta: Lenis controla el scroll del window,
+  // así que el scroll-to-top nativo de Next no aplica. Inmediato, sin inercia.
+  useEffect(() => {
+    lenisRef.current?.scrollTo(0, { immediate: true });
+  }, [pathname]);
 
   return <>{children}</>;
 }

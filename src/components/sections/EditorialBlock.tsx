@@ -5,21 +5,7 @@ import { useTranslations } from 'next-intl';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
 import { AnimatedTextReveal } from '@/components/animations/AnimatedTextReveal';
 import { cn } from '@/lib/utils';
-
-interface EditorialBlockImage {
-  readonly alt: string;
-  readonly height: number;
-  readonly src: string;
-  readonly width: number;
-}
-
-interface EditorialBlockProps {
-  readonly bodyKey: string;
-  readonly image: EditorialBlockImage;
-  readonly index: number;
-  readonly reverse?: boolean;
-  readonly titleKey: string;
-}
+import type { EditorialBlockProps } from './interfaces';
 
 /** Bloque editorial: número + título sweep + párrafo + imagen, lado alternable. */
 export function EditorialBlock({

@@ -1,35 +1,9 @@
 /*
  * Tokens semánticos — valores exactos del diseño aprobado (01-design-system.md).
- * :root = light (adaptación). .dark = dark (tema nativo aprobado).
+ * :root = dark (tema nativo aprobado, DEFAULT). .light = light (adaptación, opt-in).
+ * Dark en :root garantiza fondo negro incluso en shells sin clase (ej. <html id="__next_error__">).
  */
 :root {
-  /* LIGHT (adaptación) */
-  --bg: #f6f3ec;
-  --bg-elevated: #ffffff;
-  --bg-sunken: #efeae0;
-  --bg-sunken-rgb: 239 234 224;
-  --surface-card: #ffffff;
-  --text-primary: #1c1813;
-  --text-body: #4a443a;
-  --text-muted: #8a8478;
-  --gold-label: #9a7b3e;
-  --hairline: rgba(120, 96, 40, 0.18);
-  --gold-1: #7a5c2e;
-  --gold-2: #b98e3f;
-  --gold-3: #e3c573;
-  --gold-4: #c9a253;
-  --gold-5: #8a6736;
-  --accent: #a9803c;
-  --accent-rgb: 169 128 60;
-  --selection-bg: #caa45a;
-  --selection-fg: #0a0908;
-
-  --gold-gradient: linear-gradient(180deg, #7a5c2e 0%, #b98e3f 24%, #e3c573 50%, #c9a253 64%, #8a6736 100%);
-  --card-gradient: linear-gradient(180deg, #ffffff, #f3eee3);
-  --shadow-card: 0 18px 44px rgba(120, 96, 40, 0.14);
-}
-
-.dark {
   /* DARK (diseño aprobado — valores exactos del prototipo) */
   --bg: #000000;
   --bg-elevated: #0a0908;
@@ -54,4 +28,31 @@
   --gold-gradient: linear-gradient(180deg, #7a5c2e 0%, #c9a253 24%, #f6e6b4 50%, #d8b86c 64%, #8a6736 100%);
   --card-gradient: linear-gradient(180deg, #100e0b, #0b0a08);
   --shadow-card: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.light {
+  /* LIGHT (adaptación — opt-in manual vía ThemeToggle) */
+  --bg: #f6f3ec;
+  --bg-elevated: #ffffff;
+  --bg-sunken: #efeae0;
+  --bg-sunken-rgb: 239 234 224;
+  --surface-card: #ffffff;
+  --text-primary: #1c1813;
+  --text-body: #4a443a;
+  --text-muted: #8a8478;
+  --gold-label: #9a7b3e;
+  --hairline: rgba(120, 96, 40, 0.18);
+  --gold-1: #7a5c2e;
+  --gold-2: #b98e3f;
+  --gold-3: #e3c573;
+  --gold-4: #c9a253;
+  --gold-5: #8a6736;
+  --accent: #a9803c;
+  --accent-rgb: 169 128 60;
+  --selection-bg: #caa45a;
+  --selection-fg: #0a0908;
+
+  --gold-gradient: linear-gradient(180deg, #7a5c2e 0%, #b98e3f 24%, #e3c573 50%, #c9a253 64%, #8a6736 100%);
+  --card-gradient: linear-gradient(180deg, #ffffff, #f3eee3);
+  --shadow-card: 0 18px 44px rgba(120, 96, 40, 0.14);
 }

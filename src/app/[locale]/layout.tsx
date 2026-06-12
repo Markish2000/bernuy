@@ -1,13 +1,14 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Cormorant_Garamond, Jost } from 'next/font/google';
 import { isLocale, routing } from '@/i18n/routing';
 import { buildMetadata } from '@/lib/seo';
-import { site } from '@/config/site';
+import { buildOrganizationLd } from '@/lib/structured-data';
 import { ThemeProvider, themeInitScript } from '@/components/providers/ThemeProvider';
 import { SmoothScrollProvider } from '@/components/providers/SmoothScrollProvider';
+import { ServiceWorkerRegister } from '@/components/providers/ServiceWorkerRegister';
 import { JsonLd } from '@/components/seo/JsonLd';
 import '@/styles/globals.css';
 
@@ -28,6 +29,10 @@ const jost = Jost({
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export const viewport: Viewport = {
+  themeColor: '#0b0b0b',
+};
 
 interface LocaleLayoutProps {
   readonly children: React.ReactNode;
@@ -59,17 +64,10 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   const messages = await getMessages({ locale });
   const translateA11y = await getTranslations({ locale, namespace: 'a11y' });
 
-  const organizationLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: site.name,
-    url: site.url,
-    logo: `${site.url}/assets/brand/logo-letter-b.png`,
-    sameAs: [site.social.instagram, site.social.facebook],
-  };
+  const organizationLd = buildOrganizationLd();
 
   return (
-    <html className={`${cormorant.variable} ${jost.variable} dark`} lang={locale} suppressHydrationWarning>
+    <html className={`${cormorant.variable} ${jost.variable}`} lang={locale} style={{ colorScheme: 'dark' }} suppressHydrationWarning>
       <head>
         {/* eslint-disable-next-line react/no-danger */}
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
@@ -84,6 +82,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           </ThemeProvider>
         </NextIntlClientProvider>
         <JsonLd data={organizationLd} />
+        <ServiceWorkerRegister />
       </body>
     </html>
   );

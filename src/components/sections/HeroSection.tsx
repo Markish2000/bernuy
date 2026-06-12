@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Link } from '@/i18n/navigation';
-import type { Product } from '@/types/product';
+import type { HeroSectionProps } from './interfaces';
 
 gsap.registerPlugin(useGSAP);
 
@@ -18,10 +18,6 @@ const LETTER_WIDTH: Record<string, number> = {
   u: 106,
   y: 104,
 };
-
-interface HeroSectionProps {
-  readonly fragrances: Pick<Product, 'letter' | 'slug'>[];
-}
 
 /** Hero: monograma navegable (6 letras-imagen) + intro + scroll-cue. */
 export function HeroSection({ fragrances }: HeroSectionProps) {

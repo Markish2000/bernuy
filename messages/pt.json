@@ -17,6 +17,13 @@
     "about": "Sobre nós",
     "fragrances": "Fragrâncias"
   },
+  "notFound": {
+    "eyebrow": "Erro 404",
+    "title": "Esta essência se desvaneceu",
+    "body": "A página que procuras não existe ou foi movida. Deixa-te guiar de volta às nossas essências.",
+    "home": "Voltar ao início",
+    "fragrances": "Ver fragrâncias"
+  },
   "hero": {
     "intro": "Descubra a magia dos nossos perfumes exclusivos. Deixe-se levar por uma experiência sensorial única, onde cada essência conta uma história.",
     "scroll": "Deslize",

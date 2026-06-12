@@ -1,15 +1,9 @@
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
+import type { LogoProps } from './interfaces';
 
 const NATURAL_WIDTH = 384;
 const NATURAL_HEIGHT = 184;
-
-interface LogoProps {
-  readonly className?: string;
-  readonly href?: string;
-  readonly label: string;
-  readonly size?: number;
-}
 
 /**
  * Logo BERNUY (imagen única). El contenedor lleva aria-label y el <img>

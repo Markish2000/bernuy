@@ -3,12 +3,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import type { Product } from '@/types/product';
-
-interface FragranceCardProps {
-  readonly product: Product;
-  readonly active?: boolean;
-}
+import type { FragranceCardProps } from './interfaces';
 
 /** Card de fragancia: botella + nombre + meta. Hover revela carácter + CTA. */
 export function FragranceCard({ product, active = false }: FragranceCardProps) {

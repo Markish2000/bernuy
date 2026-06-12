@@ -1,37 +1,29 @@
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
-import type { ReactNode } from 'react';
+import type { Theme } from './types';
+import type { ThemeContextValue, ThemeProviderProps } from './interfaces';
 
-export type Theme = 'dark' | 'light';
-
-interface ThemeContextValue {
-  readonly setTheme: (theme: Theme) => void;
-  readonly theme: Theme;
-  readonly toggleTheme: () => void;
-}
+export type { Theme } from './types';
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 const STORAGE_KEY = 'theme';
 
-/** Script anti-flash: aplica la clase antes del primer paint. Inyectar en <head>. */
-export const themeInitScript = `(function(){try{var t=localStorage.getItem('${STORAGE_KEY}');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.classList.toggle('dark',t!=='light');document.documentElement.style.colorScheme=t;}catch(e){document.documentElement.classList.add('dark');}})();`;
+/** Script anti-flash: aplica la clase antes del primer paint. Inyectar en <head>.
+ *  Dark es el default (:root). Solo light agrega la clase `.light`. */
+export const themeInitScript = `(function(){try{var t=localStorage.getItem('${STORAGE_KEY}')||'dark';document.documentElement.classList.toggle('light',t==='light');document.documentElement.style.colorScheme=t;}catch(e){document.documentElement.style.colorScheme='dark';}})();`;
 
 function readInitialTheme(): Theme {
   if (typeof document === 'undefined') return 'dark';
-  return document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-}
-
-interface ThemeProviderProps {
-  readonly children: ReactNode;
+  return document.documentElement.classList.contains('light') ? 'light' : 'dark';
 }
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
   const [theme, setThemeState] = useState<Theme>(readInitialTheme);
 
   useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark');
+    document.documentElement.classList.toggle('light', theme === 'light');
     document.documentElement.style.colorScheme = theme;
   }, [theme]);
 

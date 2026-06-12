@@ -1,10 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-
-interface VariantSelectorProps {
-  readonly availableSizes: number[];
-}
+import type { VariantSelectorProps } from './interfaces';
 
 /** STUB: lee availableSizes (hoy [100]). Sin efecto sobre el carrito. */
 export function VariantSelector({ availableSizes }: VariantSelectorProps) {

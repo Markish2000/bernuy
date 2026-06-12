@@ -6,10 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { locales } from '@/i18n/routing';
 import type { Locale } from '@/i18n/routing';
-
-interface LanguageSwitcherProps {
-  readonly label: string;
-}
+import type { LanguageSwitcherProps } from './interfaces';
 
 function localeDisplayName(locale: string, displayIn: string): string {
   const [language, region] = locale.split('-');
@@ -77,7 +74,7 @@ export function LanguageSwitcher({ label }: LanguageSwitcherProps) {
         {open ? (
           <motion.ul
             animate={{ opacity: 1, y: 0 }}
-            className="absolute right-0 z-50 mt-5 max-h-72 w-56 overflow-y-auto rounded-card border border-hairline bg-bg-sunken p-2 backdrop-blur-md"
+            className="absolute right-0 z-50 mt-8 max-h-72 w-56 overflow-y-auto rounded-card border border-hairline bg-bg-sunken p-2 backdrop-blur-md"
             exit={{ opacity: 0, y: -8 }}
             initial={{ opacity: 0, y: -8 }}
             role="listbox"

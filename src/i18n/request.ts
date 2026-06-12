@@ -1,7 +1,6 @@
 import { getRequestConfig } from 'next-intl/server';
 import { isLocale, routing } from './routing';
-
-type Messages = { [key: string]: string | Messages };
+import type { Messages } from './types';
 
 export default getRequestConfig(async ({ requestLocale }) => {
   const requested = await requestLocale;

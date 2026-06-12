@@ -10,10 +10,7 @@ import { MobileMenu } from '@/components/layout/MobileMenu';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 import { cn } from '@/lib/utils';
-
-interface AppHeaderProps {
-  readonly variant?: 'solid' | 'transparent';
-}
+import type { AppHeaderProps } from './interfaces';
 
 /** Barra fija. `transparent` se solidifica al scrollear; `solid` nace sólida. */
 export function AppHeader({ variant = 'transparent' }: AppHeaderProps) {
@@ -59,7 +56,7 @@ export function AppHeader({ variant = 'transparent' }: AppHeaderProps) {
                       {translateNav('fragrances')}
                     </Link>
 
-                    <div className="pointer-events-none absolute left-1/2 top-full z-50 -translate-x-1/2 pt-5 opacity-0 transition-opacity duration-300 group-hover:pointer-events-auto group-hover:opacity-100">
+                    <div className="pointer-events-none absolute left-1/2 top-full z-50 -translate-x-1/2 pt-8 opacity-0 transition-opacity duration-300 group-hover:pointer-events-auto group-hover:opacity-100">
                       <ul className="min-w-[220px] rounded-md border border-accent/[0.16] bg-bg-sunken/[0.96] py-2 shadow-[0_18px_40px_-20px_rgba(0,0,0,0.8)] backdrop-blur-[14px]">
                         {products.map((product) => (
                           <li key={product.slug}>

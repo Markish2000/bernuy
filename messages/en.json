@@ -17,6 +17,13 @@
     "about": "About",
     "fragrances": "Fragrances"
   },
+  "notFound": {
+    "eyebrow": "Error 404",
+    "title": "This essence has faded away",
+    "body": "The page you are looking for does not exist or has been moved. Let us guide you back to our essences.",
+    "home": "Back to home",
+    "fragrances": "View fragrances"
+  },
   "hero": {
     "intro": "Discover the magic of our exclusive perfumes. Let yourself be carried away by a unique sensory experience, where every essence tells a story.",
     "scroll": "Scroll",

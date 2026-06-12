@@ -1,10 +1,7 @@
 'use client';
 
 import { useTheme } from '@/components/providers/ThemeProvider';
-
-interface ThemeToggleProps {
-  readonly label: string;
-}
+import type { ThemeToggleProps } from './interfaces';
 
 /** Pista 46×24 con knob dorado que desliza. Persiste tema en localStorage. */
 export function ThemeToggle({ label }: ThemeToggleProps) {

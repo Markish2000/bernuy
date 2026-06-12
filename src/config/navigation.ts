@@ -1,10 +1,8 @@
 /** Estructura de navegación. Sin copy hardcodeado: solo keys i18n + hrefs. */
 
-export interface NavItem {
-  hash: string; // ancla dentro del home
-  href: string;
-  labelKey: string;
-}
+import type { NavItem } from './interfaces';
+
+export type { NavItem } from './interfaces';
 
 export const mainNav: NavItem[] = [
   { hash: 'nosotros', href: '/', labelKey: 'nav.about' },

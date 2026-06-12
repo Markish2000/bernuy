@@ -1,11 +1,5 @@
-import type { ReactNode } from 'react';
 import { FragranceDetail } from '@/components/sections/FragranceDetail';
-import type { Product } from '@/types/product';
-
-interface ProductDetailProps {
-  readonly product: Product;
-  readonly purchaseSlot?: ReactNode;
-}
+import type { ProductDetailProps } from './interfaces';
 
 /**
  * STUB de tienda: hoy = FragranceDetail. `purchaseSlot` reserva el espacio

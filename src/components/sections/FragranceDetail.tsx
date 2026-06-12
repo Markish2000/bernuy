@@ -9,11 +9,7 @@ import { LifestyleImage } from '@/components/sections/LifestyleImage';
 import { OlfactoryNotes } from '@/components/sections/OlfactoryNotes';
 import { FragranceCollection } from '@/components/sections/FragranceCollection';
 import { getAllProducts } from '@/lib/products';
-import type { Product } from '@/types/product';
-
-interface FragranceDetailProps {
-  readonly product: Product;
-}
+import type { FragranceDetailProps } from './interfaces';
 
 /** Plantilla única data-driven de detalle (las 6 fragancias comparten layout). */
 export async function FragranceDetail({ product }: FragranceDetailProps) {

@@ -15,7 +15,7 @@ export function ScrollProgressIndicator() {
     const element = ref.current;
     if (!element) return;
 
-    const prefersReducedMotion = window.matchMedia(
+    const prefersReducedMotion = globalThis.matchMedia(
       '(prefers-reduced-motion: reduce)',
     ).matches;
     if (prefersReducedMotion) return;

@@ -20,7 +20,7 @@ function bottleDetail(slug: string) {
     altKey: `products.${slug}.images.bottleDetail`,
     height: 741,
     role: 'bottle' as const,
-    src: `/assets/products/${slug}/perfume-bottle-${slug}-detail.png`,
+    src: `/assets/products/${slug}/perfume-packshot-${slug}.png`,
     width: 1113,
   };
 }
@@ -38,7 +38,7 @@ function box(slug: string) {
     altKey: `products.${slug}.images.box`,
     height: 788,
     role: 'box' as const,
-    src: `/assets/products/${slug}/perfume-box-${slug}.png`,
+    src: `/assets/products/${slug}/perfume-banner-${slug}.png`,
     width: 1136,
   };
 }

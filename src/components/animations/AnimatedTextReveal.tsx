@@ -1,21 +1,12 @@
 'use client';
 
 import { useRef } from 'react';
-import type { ReactNode } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import type { AnimatedTextRevealProps } from './interfaces';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
-
-type RevealVariant = 'fade' | 'sweep';
-
-interface AnimatedTextRevealProps {
-  readonly children: ReactNode;
-  readonly className?: string;
-  readonly delay?: number;
-  readonly variant?: RevealVariant;
-}
 
 /**
  * Revela texto. `sweep` = deriva horizontal continua del título editorial
@@ -35,7 +26,7 @@ export function AnimatedTextReveal({
       const element = ref.current;
       if (!element) return;
 
-      const prefersReducedMotion = window.matchMedia(
+      const prefersReducedMotion = globalThis.matchMedia(
         '(prefers-reduced-motion: reduce)',
       ).matches;
       if (prefersReducedMotion) {

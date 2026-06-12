@@ -1,7 +1,4 @@
-interface ScrollCueBarProps {
-  readonly label: string;
-  readonly targetId: string;
-}
+import type { ScrollCueBarProps } from './interfaces';
 
 /** Barra full-width entre secciones: frase italic + flecha oro animada. */
 export function ScrollCueBar({ label, targetId }: ScrollCueBarProps) {

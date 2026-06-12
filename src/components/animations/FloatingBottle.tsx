@@ -1,16 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-
-interface FloatingBottleProps {
-  readonly alt: string;
-  readonly height: number;
-  readonly maxWidth?: number;
-  readonly priority?: boolean;
-  readonly sizes?: string;
-  readonly src: string;
-  readonly width: number;
-}
+import type { FloatingBottleProps } from './interfaces';
 
 /**
  * Botella PNG flotante (hero de detalle): float loop + drop-shadow.

@@ -1,6 +1,4 @@
-interface JsonLdProps {
-  readonly data: Record<string, unknown>;
-}
+import type { JsonLdProps } from './interfaces';
 
 /** Inserta un bloque JSON-LD. El contenido es generado por nosotros (no input de usuario). */
 export function JsonLd({ data }: JsonLdProps) {

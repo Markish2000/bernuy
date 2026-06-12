@@ -3,11 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { ScrollReveal } from '@/components/animations/ScrollReveal';
 import { NoteCard } from '@/components/ui/NoteCard';
-import type { Product } from '@/types/product';
-
-interface OlfactoryNotesProps {
-  readonly product: Product;
-}
+import type { OlfactoryNotesProps } from './interfaces';
 
 /** Familia olfativa + pirámide (Salida · Cuerpo · Fondo) con reveal escalonado. */
 export function OlfactoryNotes({ product }: OlfactoryNotesProps) {

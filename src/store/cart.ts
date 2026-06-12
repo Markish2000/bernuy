@@ -12,16 +12,9 @@
  * `persist`, y conectar CartDrawer/AddToCartButton/CheckoutButton.
  */
 
-export interface CartItem {
-  quantity: number;
-  variantId: string;
-}
+import type { CartState } from './interfaces';
 
-export interface CartState {
-  isOpen: boolean;
-  items: CartItem[];
-  total: number;
-}
+export type { CartItem, CartState } from './interfaces';
 
 export const INITIAL_CART_STATE: CartState = {
   isOpen: false,
