@@ -6,7 +6,7 @@ import { Link } from '@/i18n/navigation';
 import type { FragranceCardProps } from './interfaces';
 
 /** Card de fragancia: botella + nombre + meta; hover revela carácter + tagline + CTA.
- *  `collection` añade glow superior + índice (01…06). */
+ *  `collection` añade glow superior. */
 export function FragranceCard({ product, active = false, variant = 'grid' }: FragranceCardProps) {
   const translate = useTranslations();
   const thumb = product.images.find((image) => image.role === 'thumb') ?? product.images[0];
@@ -32,15 +32,10 @@ export function FragranceCard({ product, active = false, variant = 'grid' }: Fra
       href={`/fragancias/${product.slug}`}
     >
       {isCollection ? (
-        <>
-          <span
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-[radial-gradient(120%_80%_at_50%_0%,rgba(202,164,90,0.10),transparent_70%)]"
-          />
-          <span className="absolute right-5 top-5 z-10 font-mono text-[10px] tracking-eyebrow-sm text-gold-label">
-            {String(product.order).padStart(2, '0')}
-          </span>
-        </>
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-[radial-gradient(120%_80%_at_50%_0%,rgba(202,164,90,0.10),transparent_70%)]"
+        />
       ) : null}
       {active ? (
         <span className="absolute right-4 top-4 z-10 rounded-[2px] border border-white/40 bg-white/10 px-[10px] py-[5px] font-mono text-[9px] uppercase tracking-eyebrow-sm text-white/85">
