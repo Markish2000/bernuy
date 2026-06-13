@@ -11,12 +11,10 @@ import type { EditorialBlockProps } from './interfaces';
 export function EditorialBlock({
   bodyKey,
   image,
-  index,
   reverse = false,
   titleKey,
 }: EditorialBlockProps) {
   const translate = useTranslations();
-  const number = String(index).padStart(2, '0');
 
   const imageColumn = (
     <div
@@ -41,7 +39,6 @@ export function EditorialBlock({
 
   const textColumn = (
     <div className={cn(reverse ? 'md:order-1' : 'md:order-2')}>
-      <span className="font-mono text-[11px] tracking-eyebrow text-accent">{number}</span>
       <div className="my-[14px] mb-[26px] overflow-hidden">
         <AnimatedTextReveal
           className="inline-block whitespace-nowrap font-display text-[46px] font-normal tracking-title text-text-primary"
