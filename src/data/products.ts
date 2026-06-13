@@ -18,10 +18,10 @@ function bottleHero(slug: string) {
 function bottleThumb(slug: string) {
   return {
     altKey: `products.${slug}.images.thumb`,
-    height: 358,
+    height: 780,
     role: 'thumb' as const,
     src: `/assets/products/${slug}/perfume-bottle-${slug}-thumb.png`,
-    width: 322,
+    width: 600,
   };
 }
 function box(slug: string) {

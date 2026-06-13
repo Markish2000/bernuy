@@ -44,7 +44,7 @@ export function FragranceCard({ product, active = false, variant = 'grid' }: Fra
       <div className="relative flex h-[250px] items-center justify-center">
         <Image
           alt={translate(thumb.altKey)}
-          className="h-auto w-full max-w-[270px] object-contain drop-shadow-[0_18px_28px_rgba(0,0,0,0.6)] transition-transform duration-[600ms] ease-premium group-hover:-translate-y-[10px] group-hover:scale-[1.04]"
+          className="h-auto w-full max-w-[230px] object-contain drop-shadow-[0_18px_28px_rgba(0,0,0,0.6)] transition-transform duration-[600ms] ease-premium group-hover:-translate-y-[10px] group-hover:scale-[1.04]"
           height={thumb.height}
           sizes="(max-width: 640px) 80vw, 360px"
           src={thumb.src}
