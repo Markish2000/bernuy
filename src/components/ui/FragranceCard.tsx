@@ -19,6 +19,12 @@ export function FragranceCard({ product, active = false, variant = 'grid' }: Fra
 
   const isCollection = variant === 'collection';
 
+  const sizeKeyByGender: Record<string, string> = {
+    masculino: 'collection.sizeMasculine',
+    femenino: 'collection.sizeFeminine',
+  };
+  const sizeKey = sizeKeyByGender[product.gender] ?? 'collection.size';
+
   return (
     <Link
       aria-current={active ? 'page' : undefined}
@@ -57,7 +63,7 @@ export function FragranceCard({ product, active = false, variant = 'grid' }: Fra
           {translate(product.nameKey)}
         </div>
         <div className="mt-[9px] font-mono text-[10.5px] uppercase tracking-eyebrow-sm text-white/65">
-          {translate('collection.size')}
+          {translate(sizeKey)}
         </div>
       </div>
 
