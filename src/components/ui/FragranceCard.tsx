@@ -56,7 +56,7 @@ export function FragranceCard({ product, active = false, variant = 'grid' }: Fra
         <div className="font-display text-[25px] tracking-[0.1em] text-text-primary">
           {translate(product.nameKey)}
         </div>
-        <div className="mt-[9px] font-mono text-[10.5px] uppercase tracking-eyebrow-sm text-gold-label">
+        <div className="mt-[9px] font-mono text-[10.5px] uppercase tracking-eyebrow-sm text-white/65">
           {translate('collection.size')}
         </div>
       </div>
