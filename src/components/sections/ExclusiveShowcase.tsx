@@ -16,7 +16,7 @@ export function ExclusiveShowcase({ product }: ExclusiveShowcaseProps) {
   return (
     <section
       aria-labelledby="exclusive-title"
-      className="px-5 pb-10 pt-24 text-center sm:px-6 lg:px-12"
+      className="px-5 pb-0 pt-24 text-center sm:px-6 lg:px-12"
       id="exclusiva"
     >
       <ScrollReveal y={28}>
@@ -50,7 +50,7 @@ export function ExclusiveShowcase({ product }: ExclusiveShowcaseProps) {
       ))}
 
       <ScrollReveal y={20}>
-        <p className="mx-auto mt-[46px] max-w-[720px] font-display text-[clamp(20px,2.6vw,30px)] italic tracking-[0.06em] text-text-primary">
+        <p className="mx-auto mt-[60px] max-w-[720px] font-display text-[clamp(20px,2.6vw,30px)] italic tracking-[0.06em] text-text-primary">
           {translate(product.quoteKey)}
         </p>
       </ScrollReveal>
