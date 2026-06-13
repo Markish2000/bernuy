@@ -61,15 +61,15 @@ export function FragranceCard({ product, active = false, variant = 'grid' }: Fra
         </div>
       </div>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 translate-y-full bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.82)_26%,rgba(0,0,0,0.97)_60%)] px-6 pb-8 pt-[30px] text-center transition-transform duration-[600ms] ease-premium group-hover:translate-y-0">
-        <div className="mx-auto mb-[18px] h-px w-[34px] bg-accent/55" />
-        <div className="font-mono text-[11px] uppercase tracking-eyebrow-sm text-[#d8c089]">
+      <div className="absolute inset-x-0 bottom-0 translate-y-full bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,0.88)_28%,rgba(0,0,0,0.99)_62%)] px-6 pb-8 pt-[34px] text-center transition-transform duration-[600ms] ease-premium group-hover:translate-y-0">
+        <div className="mx-auto mb-[18px] h-px w-[44px] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.6),transparent)]" />
+        <div className="font-mono text-[11px] uppercase tracking-eyebrow-sm text-white/65">
           {translate(product.characterKey)}
         </div>
-        <p className="mt-[14px] font-display text-[17px] italic leading-[1.55] text-[#d6d6d6]">
+        <p className="mt-[14px] font-display text-[17px] italic leading-[1.55] text-[#e8e8e8]">
           {translate(product.taglineKey)}
         </p>
-        <span className="mt-[22px] inline-block rounded-[2px] border border-accent/50 px-[30px] py-[11px] font-sans text-[11.5px] uppercase tracking-eyebrow-sm text-[#e7d6a4] transition-colors duration-[400ms] group-hover:bg-accent/90 group-hover:text-[#000000]">
+        <span className="mt-[22px] inline-block rounded-[2px] border border-white/35 bg-white/[0.04] px-[32px] py-[11px] font-sans text-[11.5px] uppercase tracking-eyebrow-sm text-white/90 backdrop-blur-[2px] transition-[background-color,color,border-color,box-shadow] duration-[350ms] hover:border-white hover:bg-white hover:text-black hover:shadow-[0_0_24px_-4px_rgba(255,255,255,0.45)]">
           {translate('collection.explore')}
         </span>
       </div>
