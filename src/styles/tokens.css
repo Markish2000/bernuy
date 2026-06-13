@@ -28,6 +28,14 @@
   --gold-gradient: linear-gradient(180deg, #7a5c2e 0%, #c9a253 24%, #f6e6b4 50%, #d8b86c 64%, #8a6736 100%);
   --card-gradient: linear-gradient(180deg, #100e0b, #0b0a08);
   --shadow-card: 0 24px 60px rgba(0, 0, 0, 0.5);
+
+  /* Card de fragancia: borde plateado + glow plateado (diseño dark aprobado) */
+  --card-bg: #000000;
+  --card-edge: rgba(255, 255, 255, 0.12);
+  --card-edge-active: rgba(255, 255, 255, 0.3);
+  --card-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.16), 0 18px 50px -28px rgba(0, 0, 0, 0.9);
+  --card-shadow-hover: inset 0 1px 0 0 rgba(255, 255, 255, 0.32), 0 0 38px -12px rgba(220, 226, 236, 0.24), 0 20px 56px -26px rgba(0, 0, 0, 0.95);
+  --card-shadow-active: inset 0 1px 0 0 rgba(255, 255, 255, 0.4), 0 0 46px -10px rgba(220, 226, 236, 0.3), 0 22px 60px -24px rgba(0, 0, 0, 0.95);
 }
 
 .light {
@@ -55,4 +63,12 @@
   --gold-gradient: linear-gradient(180deg, #7a5c2e 0%, #b98e3f 24%, #e3c573 50%, #c9a253 64%, #8a6736 100%);
   --card-gradient: linear-gradient(180deg, #ffffff, #f3eee3);
   --shadow-card: 0 18px 44px rgba(120, 96, 40, 0.14);
+
+  /* Card de fragancia: borde dorado tenue + sombra cálida (adaptación light) */
+  --card-bg: #ffffff;
+  --card-edge: rgba(120, 96, 40, 0.18);
+  --card-edge-active: rgba(120, 96, 40, 0.4);
+  --card-shadow: 0 18px 44px rgba(120, 96, 40, 0.14);
+  --card-shadow-hover: 0 24px 56px rgba(120, 96, 40, 0.2);
+  --card-shadow-active: 0 24px 56px rgba(120, 96, 40, 0.24);
 }

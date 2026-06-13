@@ -12,10 +12,10 @@ export function FragranceCard({ product, active = false }: FragranceCardProps) {
   const thumb = product.images.find((image) => image.role === 'thumb') ?? product.images[0];
 
   const baseLink =
-    'group relative block overflow-hidden rounded-card border bg-surface-card transition-[transform,border-color,box-shadow] duration-500 hover:-translate-y-[6px]';
+    'group relative block overflow-hidden rounded-card border bg-[color:var(--card-bg)] transition-[transform,border-color,box-shadow] duration-500 hover:-translate-y-[6px]';
   const stateClass = active
-    ? 'border-accent/40 shadow-card'
-    : 'border-hairline shadow-card hover:border-accent/40 hover:shadow-card-hover';
+    ? 'border-[color:var(--card-edge-active)] shadow-[var(--card-shadow-active)]'
+    : 'border-[color:var(--card-edge)] shadow-[var(--card-shadow)] hover:border-[color:var(--card-edge-active)] hover:shadow-[var(--card-shadow-hover)]';
 
   const sizeKeyByGender: Record<string, string> = {
     masculino: 'collection.sizeMasculine',
