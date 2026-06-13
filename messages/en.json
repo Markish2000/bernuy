@@ -112,7 +112,9 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "share": "Share",
-    "legal": "Copyright © {year} Bernuy · All rights reserved. The content, design and graphics of this website are protected by copyright and intellectual property laws."
+    "legal": "Copyright © {year} Bernuy · All rights reserved. The content, design and graphics of this website are protected by copyright and intellectual property laws.",
+    "copyLink": "Copy link",
+    "copied": "Copied"
   },
   "seo": {
     "home": {

@@ -3,6 +3,7 @@ import { Link } from '@/i18n/navigation';
 import { mainNav } from '@/config/navigation';
 import { site } from '@/config/site';
 import { Logo } from '@/components/layout/Logo';
+import { CopyLinkButton } from '@/components/ui/CopyLinkButton';
 
 /** Footer de 3 columnas (Links · Logo · Contacto) + barra legal. Estático. */
 export async function AppFooter() {
@@ -99,6 +100,11 @@ export async function AppFooter() {
               {item.label}
             </a>
           ))}
+          <CopyLinkButton
+            url={site.url}
+            label={translateFooter('copyLink')}
+            copiedLabel={translateFooter('copied')}
+          />
         </div>
       </div>
 
