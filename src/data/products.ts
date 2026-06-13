@@ -33,12 +33,14 @@ function box(slug: string) {
     width: 1136,
   };
 }
-function lifestyle(slug: string) {
+function lifestyle(slug: string, video = false) {
   return {
     altKey: `products.${slug}.images.lifestyle`,
     height: 649,
     role: 'lifestyle' as const,
-    src: `/assets/products/${slug}/lifestyle-${slug}.png`,
+    src: video
+      ? `/assets/products/${slug}/video-${slug}.mp4`
+      : `/assets/products/${slug}/lifestyle-${slug}.png`,
     width: 1136,
   };
 }
@@ -90,6 +92,7 @@ function makeProduct(
   order: number,
   gender: Product['gender'],
   price: number,
+  lifestyleVideo = false,
 ): Product {
   return {
     availableSizes: [50],
@@ -103,7 +106,7 @@ function makeProduct(
       bottleHero(slug),
       box(slug),
       bottleThumb(slug),
-      lifestyle(slug),
+      lifestyle(slug, lifestyleVideo),
       pyramid(slug),
     ],
     intensity: 'eau-de-parfum',
@@ -120,10 +123,10 @@ function makeProduct(
 }
 
 export const products: Product[] = [
-  makeProduct('b', 'B', 1, 'masculino', 89000),
-  makeProduct('e', 'E', 2, 'femenino', 89000),
-  makeProduct('r', 'R', 3, 'masculino', 89000),
-  makeProduct('n', 'N', 4, 'femenino', 89000),
+  makeProduct('b', 'B', 1, 'masculino', 89000, true),
+  makeProduct('e', 'E', 2, 'femenino', 89000, true),
+  makeProduct('r', 'R', 3, 'masculino', 89000, true),
+  makeProduct('n', 'N', 4, 'femenino', 89000, true),
   makeProduct('u', 'U', 5, 'masculino', 89000),
-  makeProduct('y', 'Y', 6, 'femenino', 89000),
+  makeProduct('y', 'Y', 6, 'femenino', 89000, true),
 ];
