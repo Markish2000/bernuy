@@ -15,15 +15,6 @@ function bottleHero(slug: string) {
     width: 322,
   };
 }
-function bottleDetail(slug: string) {
-  return {
-    altKey: `products.${slug}.images.bottleDetail`,
-    height: 741,
-    role: 'bottle' as const,
-    src: `/assets/products/${slug}/perfume-packshot-${slug}.png`,
-    width: 1113,
-  };
-}
 function bottleThumb(slug: string) {
   return {
     altKey: `products.${slug}.images.thumb`,
@@ -110,7 +101,6 @@ function makeProduct(
     id: slug,
     images: [
       bottleHero(slug),
-      bottleDetail(slug),
       box(slug),
       bottleThumb(slug),
       lifestyle(slug),
