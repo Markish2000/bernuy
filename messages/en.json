@@ -61,7 +61,7 @@
       "subtitle": "Six essences. One single signature.",
       "origin": {
         "eyebrow": "The origin of the name",
-        "headline": "Six bottles, six letters. Together, our fragrances spell BERNUY.",
+        "headline": "Six bottles, six letters. Together, our fragrances spell.",
         "alt": "The six BERNUY fragrances forming the word BERNUY"
       },
       "filter": {
@@ -80,7 +80,8 @@
         }
       },
       "count": "{count} fragrances",
-      "viewAll": "View the full collection"
+      "viewAll": "View the full collection",
+      "back": "Back to home"
     }
   },
   "detail": {

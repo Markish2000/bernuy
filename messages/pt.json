@@ -61,7 +61,7 @@
       "subtitle": "Seis essências. Uma única assinatura.",
       "origin": {
         "eyebrow": "A origem do nome",
-        "headline": "Seis frascos, seis letras. Juntas, nossas fragrâncias escrevem BERNUY.",
+        "headline": "Seis frascos, seis letras. Juntas, nossas fragrâncias escrevem.",
         "alt": "As seis fragrâncias BERNUY formando a palavra BERNUY"
       },
       "filter": {
@@ -80,7 +80,8 @@
         }
       },
       "count": "{count} fragrâncias",
-      "viewAll": "Ver toda a coleção"
+      "viewAll": "Ver toda a coleção",
+      "back": "Voltar ao início"
     }
   },
   "detail": {
