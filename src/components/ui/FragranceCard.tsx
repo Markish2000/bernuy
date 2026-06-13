@@ -12,7 +12,7 @@ export function FragranceCard({ product, active = false, variant = 'grid' }: Fra
   const thumb = product.images.find((image) => image.role === 'thumb') ?? product.images[0];
 
   const baseLink =
-    'group relative block overflow-hidden rounded-card border bg-[image:var(--card-gradient)] transition-[transform,border-color,box-shadow] duration-500 hover:-translate-y-[6px]';
+    'group relative block overflow-hidden rounded-card border bg-black transition-[transform,border-color,box-shadow] duration-500 hover:-translate-y-[6px]';
   const stateClass = active
     ? 'border-white/30 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.4),0_0_46px_-10px_rgba(220,226,236,0.3),0_22px_60px_-24px_rgba(0,0,0,0.95)]'
     : 'border-white/[0.12] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.16),0_18px_50px_-28px_rgba(0,0,0,0.9)] hover:border-white/30 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.32),0_0_38px_-12px_rgba(220,226,236,0.24),0_20px_56px_-26px_rgba(0,0,0,0.95)]';
